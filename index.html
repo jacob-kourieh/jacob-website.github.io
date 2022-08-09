@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jacob Kourieh Portfolio Website. I'm currently studying Frontend developer in Gothenburg. 
+    I'm structured, ambitious, flexible, and social with a
+    positive attitude. I'm very cooperative and easy to adapt at work.
+    I love to code and I'm excited to build great applications and design great websites">
+  <meta name="keywords"
+    content="Jacob, Kourieh, Portfolio, Frontend, developer, webdeveloper, Gothenburg, work, jobb, LIA, praktik, front-end, javascript, html, css, Designer, ux, ui,
+  Usability, Node.js, react, Scrum, github, figma, Göteborg, arbetar, utvecklare, webutvecklare, javascriptutvecklare ">
+  <title>Jacob Kourieh Website</title>
+  <link rel="icon" href="./images/logo.svg" />
+  <link rel="apple-touch-icon" href="./images/logo.svg" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script type="text/javascript">
+    emailjs.init('CqsjiW6hHD_LdRD5P')
+  </script>
+</head>
+
+
+<body>
+  <div class="scrollToTop-btn">
+    <i class="fas fa-angle-up"></i>
+  </div>
+
+  <header>
+    <a href="#" class="brand">Jacob</a>
+    <div class="menu-btn"></div>
+    <div class="navigation">
+      <a href="#main" lang="en" data-i18n="home">Home</a>
+      <a href="#about" data-i18n="about">About</a>
+      <a href="#skills" data-i18n="skills">Skills</a>
+      <a href="#work" data-i18n="work">Work</a>
+      <a href="#contact" data-i18n="contact">Contact</a>
+    </div>
+
+
+
+    <div class="select p-1 mt-2 langChange">
+      <select name="format" id="format">
+        <option value="en" selected>En</option>
+        <option value="sv">Sv</option>
+      </select>
+    </div>
+
+    <!--   class="p-1 mt-2 langChange" -->
+
+  </header>
+
+  <section class="main" id="main">
+    <div class="content">
+      <h2> <span class="presentaion" data-i18n="presentaion">Hello, I'm</span> <br>
+        <span class="presentaionName">Jacob Kourieh</span>
+      </h2>
+      <div class="animated-text">
+        <h3>Frontend Developer</h3>
+        <h3>Web Designer</h3>
+        <h3>Web Development</h3>
+      </div>
+      <a href="#work" class="btn" data-i18n="firstBtn">See My Work</a>
+      <div class="media-icons">
+        <a href="https://www.instagram.com/jacob.kourieh/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/jacob-kourieh-450728179/" target="_blank"><i
+            class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/jacob-kourieh" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="title reveal">
+      <h2 class="section-title" data-i18n="aboutMe">About Me</h2>
+    </div>
+    <div class="content">
+      <div class="column col-left reveal">
+        <div class="img-card">
+          <img src="images/img-card.jpg" alt="image card Jacob">
+        </div>
+      </div>
+
+      <div class="column col-right reveal">
+        <h2 class="content-title" data-i18n="aboutMeTitle">Hey There! I'm Jacob Kourieh</h2>
+        <p class="paragraph-text" data-i18n="paragraphtext1">I'm currently studying Frontend developer in Gothenburg
+          and will finish in June 2023.</p>
+        <p class="paragraph-text" data-i18n="paragraphtext2">I'm structured, ambitious, flexible, and social with a
+          positive attitude.
+          I'm very cooperative and can easily adapt at work.</p>
+        <br>
+        <p class="paragraph-text" data-i18n="paragraphtext3">I like to be creative, social and helpful in my work.
+          I love learning new things and solving problems.</p>
+        <p class="paragraph-text" data-i18n="paragraphtext4">Web development keeps me on my toes and helps me always
+          learn and grow. </p>
+        <p class="paragraph-text" data-i18n="paragraphtext5">When I'm not coding, you can probably find me at the gym,
+          on a trip, spending time with family, or cooking.</p>
+        <br>
+        <p class="paragraph-text" data-i18n="paragraphtext6">I love to code and I'm excited to build great
+          applications and design great websites.</p>
+        <p class="paragraph-text" data-i18n="paragraphtext7">I'm really looking forward to stepping in and becoming
+          part of this branch.</p>
+        <a href="#contactMe" class="btn" data-i18n="secondBtn">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="skills" id="skills">
+    <div class="title reveal">
+      <h2 class="section-title" data-i18n="mySkills">My Skills</h2>
+    </div>
+    <div class="content">
+      <div class="column col-left reveal">
+        <h2 class="content-title" data-i18n="mySkillsTittle">My Skills and Experiences</h2>
+        <p data-i18n="mySkillsText1">My skills that are included in my Frontend are: </p>
+        <p data-i18n="mySkillsText2">HTML, CSS, JavaScript, React, Redux, APIs, UX and Usability, Figma, Github, Dynamic
+          web
+          development, TypeScrpit, Node.js, SQL/noSQL and Agile methods(Scrum).</p>
+        <br>
+        <p data-i18n="mySkillsText3">I use my skills to produce interactive and accessible websites as well as drive and
+          develop larger projects, both independently and in groups, to create dynamic website experiences.</p>
+      </div>
+      <div class="column col-right reveal">
+        <div class="bar">
+          <div class="info">
+            <span>HTML</span>
+            <span>95%</span>
+          </div>
+          <div class="line html"></div>
+        </div>
+        <div class="bar">
+          <div class="info">
+            <span>CSS</span>
+            <span>85%</span>
+          </div>
+          <div class="line css"></div>
+        </div>
+        <div class="bar">
+          <div class="info">
+            <span>Javascript</span>
+            <span>80%</span>
+          </div>
+          <div class="line javascript"></div>
+        </div>
+        <div class="bar">
+          <div class="info">
+            <span>React</span>
+            <span>70%</span>
+          </div>
+          <div class="line react"></div>
+        </div>
+        <div class="bar">
+          <div class="info">
+            <span>UX/UI</span>
+            <span>80%</span>
+          </div>
+          <div class="line ux-ui"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="work" id="work">
+    <div class="title reveal">
+      <h2 class="section-title" data-i18n="mywork">My Work</h2>
+    </div>
+    <div class="content">
+      <a href="https://frontend-city-app.vercel.app/" target="_blank" class="card reveal">
+        <div class="card-img">
+          <img src="images/work1.png" alt="City App">
+        </div>
+      </a>
+      <a href="https://solarsystem-two.vercel.app/" target="_blank" class="card reveal">
+        <div class="card-img">
+          <img src="images/work2.png" alt="Solar System">
+        </div>
+      </a>
+      <a href="https://hangman-delta.vercel.app/" target="_blank" class="card reveal">
+        <div class="card-img">
+          <img src="images/work3.png" alt="Hungman Minecraft Mobs">
+        </div>
+      </a>
+      <a href="https://agila-metoder-jacob.vercel.app/" target="_blank" class="card reveal">
+        <div class="card-img">
+          <img src="images/work4.png" alt="agila-metoder">
+        </div>
+      </a>
+      <a href="https://where-its-at-jacob.vercel.app/" target="_blank" class="card reveal">
+        <div class="card-img">
+          <img src="images/work5.png" alt="where it's at App">
+        </div>
+      </a>
+      <a href="https://www.figma.com/proto/CC32ScVhgMhaEysI6To6nI/Verktygsbiblioteket-Stickan?node-id=22%3A315&scaling=scale-down&page-id=0%3A1&starting-point-node-id=22%3A315"
+        target="_blank" class="card reveal">
+        <div class="card-img">
+          <img src="images/work6.png" alt="ux/ui project">
+        </div>
+      </a>
+      <a href="https://www.figma.com/proto/J6oD9rjZfdLq0bb7CHQ0ZB/Sinus-skateboard-by-JACOB?node-id=3%3A74&scaling=min-zoom&page-id=3%3A73&starting-point-node-id=3%3A74"
+        target="_blank" class="card reveal">
+        <div class="card-img">
+          <img src="images/work7.png" alt="ux/ui project">
+        </div>
+      </a>
+    </div>
+  </section>
+
+
+  <section class="contact" id="contact">
+    <div class="title reveal">
+      <h2 class="section-title" data-i18n="contactMe">Contact Me</h2>
+    </div>
+    <div class="content">
+      <div class="row">
+        <a href="https://www.google.com/maps/place/Gothenburg/@57.6863959,11.8889559,11.5z/data=!4m5!3m4!1s0x464f8e67966c073f:0x4019078290e7c40!8m2!3d57.70887!4d11.97456"
+          target="_blank" class="card reveal">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="info">
+            <h3 data-i18n="addressTittle">Address</h3>
+            <span data-i18n="addressInfo">Gothenburg, Sweden</span>
+          </div>
+        </a>
+
+        <a href="mailto: jacob.kourieh@gmail.com" class="card reveal">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="info">
+            <h3 data-i18n="email">Email Address</h3>
+            <span>jacob.kourieh@gmail.com</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="row" id="contactMe">
+        <form class="contact-form reveal" id="form" method="post">
+          <h3 data-i18n="sendMsg">Send Message</h3>
+          <div class="input-box field">
+            <input data-i18n="fromName" type="text" name="from_name" id="from_name" placeholder="Name" required>
+          </div>
+          <div class="input-box field">
+            <input type="email" name="reply_to" id="reply_to" placeholder="Email" required>
+          </div>
+          <div class="input-box field">
+            <textarea type="text" name="message" id="message" rows="8" cols="80" placeholder="Message"
+              required></textarea>
+          </div>
+          <div class="input-box field">
+            <input data-i18n="send" type="submit" class="send-btn" id="button" value="Send">
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <h1 class="footer-title">Jacob Kourieh</h1>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+
+</body>
+
+
+</html>
