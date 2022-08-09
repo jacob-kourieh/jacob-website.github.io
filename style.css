@@ -759,9 +759,9 @@ select {
   }    
   }
 
-  @supports (-webkit-touch-callout: none) {
+  /* @supports (-webkit-touch-callout: none) {
     .main {
         background: url('./images/bg.jpg') center top no-repeat scroll;
         background-size: auto 100vh;
     }    
-    }
+    } */
