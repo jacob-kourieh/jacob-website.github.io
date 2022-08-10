@@ -558,14 +558,14 @@ right: 8vw;
   
   .langChange {
     position: relative;
-    right: 6vh;
+    right: 6.2vh;
     }
 
 
    .main{
     background: url(images/bgMobil-version.jpg);
     background-size: cover;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 
    }
    .main .content {
@@ -631,6 +631,12 @@ right: 8vw;
     cursor: pointer;
     transition: 0.3s ease;
   }
+
+  .main {
+  background: url(images/bg.jpg)no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
   .menu-btn.active{
     z-index: 999;
@@ -752,16 +758,3 @@ select {
 
 
 
-@supports (-webkit-touch-callout: none) {
-  .main {
-      background: url('./images/bgMobil-version.jpg') /* center top */ no-repeat scroll;
-      /* background-size: auto 100vh; */
-  }    
-  }
-
-  @supports (-webkit-touch-callout: none) {
-    .main {
-        background: url('./images/bg.jpg') /* center top */ no-repeat scroll;
-       /*  background-size: auto 100vh; */
-    }    
-    }
