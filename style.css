@@ -169,6 +169,7 @@ header.sticky .navigation a:hover{
     background: #2962dc;
     overflow: hidden;
     border-radius: 0.25em;
+    
 }
 
 .select::after {
@@ -180,11 +181,9 @@ header.sticky .navigation a:hover{
   padding: 0 0.3em;
   cursor: pointer;
   pointer-events: none;
-  transition: .25s all ease;
 }
-.select:hover::after {
-   color: #3a6cf4;
-}
+
+
 
 .title{
   width: 100%;
@@ -566,12 +565,13 @@ right: 8vw;
    .main{
     background: url(images/bgMobil-version.jpg);
     background-size: cover;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
 
    }
    .main .content {
     position: relative;
-    top: -131px;
+    top: -83px;
+    font-size: 12px;
 
    }
 }
@@ -752,16 +752,16 @@ select {
 
 
 
-/* @supports (-webkit-touch-callout: none) {
+@supports (-webkit-touch-callout: none) {
   .main {
-      background: url('./images/bgMobil-version.jpg') center top no-repeat scroll;
-      background-size: auto 100vh;
+      background: url('./images/bgMobil-version.jpg') /* center top */ no-repeat scroll;
+      /* background-size: auto 100vh; */
   }    
-  } */
+  }
 
-  /* @supports (-webkit-touch-callout: none) {
+  @supports (-webkit-touch-callout: none) {
     .main {
-        background: url('./images/bg.jpg') center top no-repeat scroll;
-        background-size: auto 100vh;
+        background: url('./images/bg.jpg') /* center top */ no-repeat scroll;
+       /*  background-size: auto 100vh; */
     }    
-    } */
+    }
