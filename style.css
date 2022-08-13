@@ -20,6 +20,97 @@ section{
   padding: 100px 200px;
 }
 
+
+/* ----------- HEADER ---------- */
+header{
+  z-index: 999;
+  position: fixed;
+  background: rgb(16 40 101 / 82%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s ease;
+}
+
+header.sticky{
+  background: #3a6cf4;
+  padding: 10px 200px;
+}
+
+header .brand{
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header .navigation{
+  position: relative;
+}
+
+header .navigation a{
+  color: #fff;
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+header .navigation a:hover{
+  color: #3a6cf4;
+}
+
+header.sticky .navigation a:hover{
+  color: #000;
+}
+
+select {
+  appearance:none;
+   outline:0;
+   box-shadow:none;
+   border:0!important;
+   background: #3458a5;
+   background-image: none;
+   flex: 1;
+   padding: 0 .5em;
+   color:#fff;
+   cursor:pointer;
+   font-size: 1em;
+}
+
+.langChange {
+  margin-right: 3em;
+}
+
+.select {
+  position: relative;
+    display: flex;
+    width: 3.5em;
+    height: 2em;
+    line-height: 3;
+    background: #2962dc;
+    overflow: hidden;
+    border-radius: 0.25em;  
+}
+
+.select::after {
+  content: '\25BC';
+  color: white;
+  position: absolute;
+  top: -7px;
+  right: 0;
+  padding: 0 0.3em;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+
+/* ---------- MAIN ---------- */
 .main{
   position: relative;
   width: 100%;
@@ -113,78 +204,8 @@ section{
   margin-right: 30px;
 }
 
-header{
-  z-index: 999;
-  position: fixed;
-  background: rgb(16 40 101 / 82%);
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 15px 200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: 0.5s ease;
-}
 
-header.sticky{
-  background: #3a6cf4;
-  padding: 10px 200px;
-}
-
-header .brand{
-  color: #fff;
-  font-size: 1.8em;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-header .navigation{
-  position: relative;
-}
-
-header .navigation a{
-  color: #fff;
-  font-size: 1em;
-  font-weight: 500;
-  text-decoration: none;
-  margin-left: 30px;
-}
-
-header .navigation a:hover{
-  color: #3a6cf4;
-}
-
-header.sticky .navigation a:hover{
-  color: #000;
-}
-
-.select {
-  position: relative;
-    display: flex;
-    width: 3.5em;
-    height: 2em;
-    line-height: 3;
-    background: #2962dc;
-    overflow: hidden;
-    border-radius: 0.25em;
-    
-}
-
-.select::after {
-  content: '\25BC';
-  color: white;
-  position: absolute;
-  top: -7px;
-  right: 0;
-  padding: 0 0.3em;
-  cursor: pointer;
-  pointer-events: none;
-}
-
-
-
+/* ---------- ABOUT ---------- */
 .title{
   width: 100%;
   display: flex;
@@ -267,6 +288,8 @@ header.sticky .navigation a:hover{
   font-size: 1em;
 }
 
+
+/* ---------- SKILLS ---------- */
 .skills{
   background: #000016;
 }
@@ -327,7 +350,6 @@ header.sticky .navigation a:hover{
   top: 0;
   left: 0;
   border-radius: 20px ;
-  
 }
 
 .skills .content .col-right .bar .html:before{
@@ -361,6 +383,7 @@ header.sticky .navigation a:hover{
 }
 
 
+/* ---------- WORK ---------- */
 .work .content{
   display: flex;
   justify-content: center;
@@ -372,7 +395,6 @@ header.sticky .navigation a:hover{
 .work .content .card{
   width: 340px;
   margin: 15px;
- 
 }
 
 .work .content .card .card-img{
@@ -390,7 +412,6 @@ header.sticky .navigation a:hover{
   left: 0;
   width: 100%;
   height: 100%;
- /*  object-fit: cover; */
   border-radius: 10px;
   transition: 0.5s ease;
 }
@@ -399,6 +420,9 @@ header.sticky .navigation a:hover{
   transform: scale(1.2);
 }
 
+
+
+/* ---------- CONTACT ---------- */
 .contact .content{
   display: flex;
   justify-content: center;
@@ -508,6 +532,18 @@ header.sticky .navigation a:hover{
   background: #235bf6;
 }
 
+input[type="submit"] {
+  display: block;
+  padding: 6px 30px;
+  font-size: 14px;
+  background-color: #4460AA;
+  color: #fff;
+  border: none
+}
+
+
+
+/* ---------- FOOTER ---------- */
 .footer{
   background: #000016;
   color: #fff;
@@ -531,168 +567,9 @@ header.sticky .navigation a:hover{
   text-decoration: none;
 }
 
-.langChange {
-position: relative;
-right: 8vw;
-}
 
 
-
-@media (min-width:760px) and (max-width:1000px) { 
-  .langChange {
-    position: relative;
-    right: 5.8vw;
-}
-}
-
-@media (min-width:1000px) and (max-width:1500px) { 
-  .langChange {
-    position: relative;
-    right: 4.5vw;
-}
-}
-
-
-@media (max-width: 500px){
-  
-  .langChange {
-    position: relative;
-    right: 6.4vh;
-    }
-
-
-   .main{
-    background: url(images/bgMobil-version.jpg);
-    background-size: cover;
-    /* background-attachment: fixed; */
-
-   }
-   .main .content {
-    position: relative;
-    top: -83px;
-    font-size: 12px;
-
-   }
-}
-
-@media (max-width: 1040px){
-  header{
-    padding: 12px 20px;
-  }
- 
-  header.sticky{
-    padding: 10px 20px;
-  }
-
-  header .navigation{
-    display: none;
-  }
-
-  header .navigation.active{
-    z-index: 888;
-    position: fixed;
-    background: #fff;
-    top: 0;
-    right: 0;
-    width: 380px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
-    transition: 0.3s ease;
-  }
-
-  header .navigation a{
-    color: #000;
-    font-size: 1.2em;
-    margin: 10px;
-    padding: 0 20px;
-    border-radius: 20px;
-  }
-
-  header .navigation a:hover{
-    background: #3a6cf4;
-    color: #fff;
-    transition: 0.3s ease;
-  }
-
-  .menu-btn{
-    position: absolute;
-    background: url(images/menu.png)no-repeat;
-    background-size: 30px;
-    background-position: center;
-    width: 40px;
-    height: 40px;
-    right: 0;
-    margin: 0 20px;
-    cursor: pointer;
-    transition: 0.3s ease;
-  }
-
-  .main {
-  background: url(images/bgMobil-version.jpg);
-  background-size: cover;
- 
-}
-
-  .menu-btn.active{
-    z-index: 999;
-    background: url(images/close.png)no-repeat;
-    background-size: 25px;
-    background-position: center;
-    transition: 0.3s ease;
-    filter: invert(1);
-  }
-
-  section{
-    padding: 80px 20px;
-  }
-
-  .main .content h2{
-    font-size: 1em;
-  }
-
-  .animated-text h3{
-    font-size: 2.2em;
-  }
-
-  .section-title{
-    font-size: 1.8em;
-  }
-
-  .about .content{
-    flex-direction: column;
-  }
-
-  .about .content .column{
-    position: relative;
-    width: 100%;
-  }
-
-  .about .content .col-right{
-    margin-top: 40px;
-  }
-
-  .skills .content{
-    flex-direction: column;
-  }
-
-  .skills .content .column{
-    position: relative;
-    width: 100%;
-  }
-
-  .skills .content .col-right{
-    margin-top: 40px;
-  }
-
-  .contact-form{
-    padding: 35px 40px;
-  }
-}
-
+/* ---------- SCROLL ---------- */
 .scrollToTop-btn{
   z-index: 999;
   position: fixed;
@@ -731,29 +608,149 @@ right: 8vw;
 }
 
 
-input[type="submit"] {
-  display: block;
-  padding: 6px 30px;
-  font-size: 14px;
-  background-color: #4460AA;
-  color: #fff;
-  border: none
+
+/* ---------- MOBIL VERSION ---------- */
+@media (max-width: 500px){
+  
+  .main{
+   background: url(images/bgMobil-version.jpg);
+   background-size: cover;
+   /* background-attachment: fixed; */
+
+  }
+  .main .content {
+   position: relative;
+   margin-bottom: 12em;
+   font-size: 12px;
+
+  }
+
+  .btn-work {
+    font-size: 1.1em;
+  }
 }
 
+@media (max-width: 1040px){
+ header{
+   padding: 12px 20px;
+ }
 
-select {
-  appearance:none;
-   outline:0;
-   box-shadow:none;
-   border:0!important;
-   background: #3458a5;
-   background-image: none;
-   flex: 1;
-   padding: 0 .5em;
-   color:#fff;
-   cursor:pointer;
+ header.sticky{
+   padding: 10px 20px;
+ }
+
+ header .navigation{
+   display: none;
+ }
+
+ header .navigation.active{
+   z-index: 888;
+   position: fixed;
+   background: #fffffff0;
+   top: 0;
+   right: 0;
+   width: 380px;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+   transition: 0.3s ease;
+ }
+
+ header .navigation a{
+   color: #000;
+   font-size: 1.2em;
+   margin: 10px;
+   padding: 0 20px;
+   border-radius: 20px;
+ }
+
+ header .navigation a:hover{
+   background: #3a6cf4;
+   color: #fff;
+   transition: 0.3s ease;
+ }
+
+ .menu-btn{
+   position: absolute;
+   background: url(images/menu.png)no-repeat;
+   background-size: 30px;
+   background-position: center;
+   width: 40px;
+   height: 40px;
+   right: 0;
+   margin: 0 20px;
+   cursor: pointer;
+   transition: 0.3s ease;
+ }
+
+ .main {
+ background: url(images/bgMobil-version.jpg);
+ background-size: cover;
+
+}
+
+ .menu-btn.active{
+   z-index: 999;
+   background: url(images/close.png)no-repeat;
+   background-size: 25px;
+   background-position: center;
+   transition: 0.3s ease;
+   filter: invert(1);
+ }
+
+ section{
+   padding: 80px 20px;
+ }
+
+ .main .content h2{
    font-size: 1em;
+ }
+
+ .animated-text h3{
+   font-size: 2.2em;
+ }
+
+ .section-title{
+   font-size: 1.8em;
+ }
+
+ .about .content{
+   flex-direction: column;
+ }
+
+ .about .content .column{
+   position: relative;
+   width: 100%;
+ }
+
+ .about .content .col-right{
+   margin-top: 40px;
+ }
+
+ .skills .content{
+   flex-direction: column;
+ }
+
+ .skills .content .column{
+   position: relative;
+   width: 100%;
+ }
+
+ .skills .content .col-right{
+   margin-top: 40px;
+ }
+
+ .contact-form{
+   padding: 35px 40px;
+ }
 }
+
+
+
+
 
 
 
