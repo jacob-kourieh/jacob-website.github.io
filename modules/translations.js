@@ -9,7 +9,7 @@ const translations = {
     paragraphtext1: "I'm currently studying Frontend developer in Gothenburg and will finish in June 2023.",
     paragraphtext2: "I'm structured, ambitious, flexible, and social with a positive attitude. I'm very cooperative and can easily adapt at work.",
     paragraphtext3: "I like to be creative, social and helpful in my work. I love learning new things and solving problems.",
-    paragraphtext4: "Web development keeps me on my toes and helps me always learn and grow.",
+    paragraphtext4: "Web development keeps me on my toes and helps me to always learn and grow.",
     paragraphtext5: "When I'm not coding, you can probably find me at the gym, on a trip, spending time with family, or cooking.",
     paragraphtext6: "I love to code and I'm excited to build great applications and design great websites.",
     paragraphtext7: "I'm really looking forward to stepping in and becoming part of this branch.",
