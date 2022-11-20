@@ -371,7 +371,13 @@ select {
 }
 
 .skills .content .col-right .bar .react:before{
-  width: 66%;
+  width: 70%;
+  background: #0022d1bd;;
+  border-radius: 20px ;
+}
+
+.skills .content .col-right .bar .node:before{
+  width: 53%;
   background: #0022d1bd;;
   border-radius: 20px ;
 }
