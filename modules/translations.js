@@ -28,7 +28,13 @@ const translations = {
     email: "Email Address",
     addressInfo: "Gothenburg, Sweden",
     sendMsg: "Send Message",
+    placeholderName: "Name",
+    placeholderEmail: "Email",
+    placeholderMessage: "Message",
     send: "Send",
+    sending: "Sending...",
+    sent: "Sent!",
+    
   },
 
   sv: {
@@ -60,7 +66,12 @@ const translations = {
     email: "E-post",
     addressInfo: "Göteborg, Sverige",
     sendMsg: "Skicka Meddelande",
+    placeholderName: "Namn",
+    placeholderEmail: "E-post",
+    placeholderMessage: "Meddelande",
     send: "Skicka",
+    sending: "Skickar...",
+    sent: "Skickat!"
   },
 };
 

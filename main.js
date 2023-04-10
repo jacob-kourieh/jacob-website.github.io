@@ -55,45 +55,68 @@ function reveal() {
 }
 
 
-//Contact form
 const btn = document.getElementById('button');
+const form = document.getElementById('form');
 
-document.getElementById('form')
-  .addEventListener('submit', function (event) {
-    event.preventDefault();
+// Function to get the current language
+const getCurrentLanguage = () => localStorage.getItem("lang") || "en";
 
-    btn.value = 'Sending...';
+// Function to clear the input fields
+const clearInputFields = () => {
+  document.getElementById("from_name").value = "";
+  document.getElementById("reply_to").value = "";
+  document.getElementById("message").value = "";
+};
 
-    const serviceID = 'default_service';
-    const templateID = 'template_5cw4bqv';
+// Form submission event listener
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
 
-    emailjs.sendForm(serviceID, templateID, this)
-      .then(() => {
-        btn.value = 'Send';
+  const currentLanguage = getCurrentLanguage();
+  btn.value = translations[currentLanguage].sending;
 
-        alert('Sent!');
-        window.location.reload();
-      }, (err) => {
-        btn.value = 'Send';
-        alert(JSON.stringify(err));
-      });
-  });
+  const serviceID = 'default_service';
+  const templateID = 'template_5cw4bqv';
 
+  emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = translations[currentLanguage].send;
 
-//Change language
-const languageSelector = document.querySelector("select");
-languageSelector.addEventListener("change", (event) => {
-  setLanguage(event.target.value);
-  localStorage.setItem("lang", event.target.value);
+      alert(translations[currentLanguage].sent);
+      clearInputFields();
+    })
+    .catch((err) => {
+      btn.value = translations[currentLanguage].send;
+      alert(JSON.stringify(err));
+    });
 });
 
+// Change language event listener
+const languageSelector = document.querySelector("select");
+languageSelector.addEventListener("change", (event) => {
+  const selectedLanguage = event.target.value;
+  localStorage.setItem("lang", selectedLanguage);
+  setLanguage(selectedLanguage);
+  clearInputFields();
+});
+
+// Set language function
 const setLanguage = (language) => {
   const elements = document.querySelectorAll("[data-i18n]");
   elements.forEach((element) => {
     const translationKey = element.getAttribute("data-i18n");
     element.textContent = translations[language][translationKey];
   });
+
+  // Update the placeholders
+  document.getElementById("from_name").placeholder = translations[language].placeholderName;
+  document.getElementById("reply_to").placeholder = translations[language].placeholderEmail;
+  document.getElementById("message").placeholder = translations[language].placeholderMessage;
+
+  // Update the send button's value
+  document.getElementById("button").value = translations[language].send;
 };
+
 
 
 // // Dark mode toggle
