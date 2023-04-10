@@ -26,7 +26,8 @@
   <link rel="apple-touch-icon" href="https://i.ibb.co/gg1ZM7b/Profile-Image-1.jpg" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
@@ -50,19 +51,38 @@
       <a href="#skills" data-i18n="skills">Skills</a>
       <a href="#work" data-i18n="work">Work</a>
       <a href="#contact" data-i18n="contact">Contact</a>
+
+      <!-- Add toggle to navigation menu for mobile view -->
+      <div class="theme-switch-wrapper mobile-toggle">
+        <label class="theme-switch" for="darkmode-toggle-mobile">
+          <input type="checkbox" id="darkmode-toggle-mobile" class="darkmode-toggle" />
+          <div class="slider round">
+            <i class="fas fa-sun sun-icon"></i>
+            <i class="fas fa-moon moon-icon"></i>
+          </div>
+        </label>
+      </div>
     </div>
 
-
+    <div class="theme-switch-wrapper desktop-toggle">
+      <label class="theme-switch" for="darkmode-toggle">
+        <input type="checkbox" id="darkmode-toggle" class="darkmode-toggle" />
+        <div class="slider round">
+          <i class="fas fa-sun sun-icon"></i>
+          <i class="fas fa-moon moon-icon"></i>
+        </div>
+      </label>
+    </div>
 
     <div class="select p-1 mt-2 langChange">
       <select name="format" id="format">
         <option value="en" selected>En</option>
         <option value="sv">Sv</option>
+        <!-- <option value="es">Es</option> -->
       </select>
     </div>
-
-
   </header>
+
 
   <section class="main" id="main">
     <div class="content">
@@ -82,6 +102,7 @@
       </div>
     </div>
   </section>
+
 
   <section class="about" id="about">
     <div class="title reveal">
@@ -118,6 +139,7 @@
     </div>
   </section>
 
+  <div class="colored-spacer"></div>
 
   <section class="skills" id="skills">
     <div class="title reveal">
@@ -181,6 +203,7 @@
     </div>
   </section>
 
+  <div class="colored-spacer"></div>
 
   <section class="work" id="work">
     <div class="title reveal">
@@ -254,6 +277,7 @@
     </div>
   </section>
 
+  <div class="colored-spacer"></div>
 
   <section class="contact" id="contact">
     <div class="title reveal">

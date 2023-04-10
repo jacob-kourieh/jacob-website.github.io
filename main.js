@@ -95,4 +95,83 @@ const setLanguage = (language) => {
   });
 };
 
+
+// // Dark mode toggle
+// const darkmodeToggles = document.querySelectorAll(".darkmode-toggle");
+
+// function handleDarkmodeToggle() {
+//   document.body.classList.toggle("darkmode");
+//   localStorage.setItem("darkmode", this.checked);
+//   darkmodeToggles.forEach((toggle) => {
+//     if (toggle !== this) {
+//       toggle.checked = this.checked;
+//     }
+//   });
+// }
+
+// darkmodeToggles.forEach((toggle) => {
+//   toggle.addEventListener("change", handleDarkmodeToggle);
+// });
+
+// // Check if dark mode was previously enabled
+// if (localStorage.getItem("darkmode") === "true") {
+//   document.body.classList.add("darkmode");
+//   darkmodeToggles.forEach((toggle) => {
+//     toggle.checked = true;
+//   });
+// } else if (localStorage.getItem("darkmode") === null) {
+//   // If no preference was set, use system preference
+//   const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+//   if (isDarkMode) {
+//     document.body.classList.add("darkmode");
+//     darkmodeToggles.forEach((toggle) => {
+//       toggle.checked = true;
+//     });
+//   }
+// }
+
+
+// Dark mode toggle
+const darkmodeToggles = document.querySelectorAll(".darkmode-toggle");
+
+function handleDarkmodeToggle() {
+  document.body.classList.toggle("darkmode");
+  localStorage.setItem("darkmode", this.checked);
+  darkmodeToggles.forEach((toggle) => {
+    if (toggle !== this) {
+      toggle.checked = this.checked;
+    }
+  });
+}
+
+darkmodeToggles.forEach((toggle) => {
+  toggle.addEventListener("change", handleDarkmodeToggle);
+});
+
+function isDarkTime() {
+  const now = new Date();
+  const hours = now.getHours();
+  return hours >= 20 || hours < 6;
+}
+
+// Check if dark mode was previously enabled
+if (localStorage.getItem("darkmode") === "true") {
+  document.body.classList.add("darkmode");
+  darkmodeToggles.forEach((toggle) => {
+    toggle.checked = true;
+  });
+} else if (localStorage.getItem("darkmode") === null) {
+  // If no preference was set, use system preference
+  const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  if (isDarkMode || isDarkTime()) {
+    document.body.classList.add("darkmode");
+    darkmodeToggles.forEach((toggle) => {
+      toggle.checked = true;
+    });
+  }
+}
+
+
+
+
 //The website created by © Jacob Kourieh.
