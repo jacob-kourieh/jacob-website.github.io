@@ -32,13 +32,14 @@
   font-family: 'Poppins', sans-serif;
   scrollbar-width: thin;
   scrollbar-color: #888 #f1f1f1;
+  scroll-behavior: smooth;
   
 }
 
 body{
   min-height: 110vh;
-   transition: background 0.2s linear;
-   background-color: rgb(241 241 241 / 76%);;
+  transition: background 0.2s linear;
+  background-color: rgb(241 241 241 / 76%);;
   }
 
 a{
@@ -47,17 +48,14 @@ a{
 
 section{
   padding: 100px 200px;
-  box-shadow: 0 2px 23px rgb(1 1 1 / 15%);
+  /* box-shadow: 0 2px 23px rgb(1 1 1 / 15%); */
 }
 
-
 .colored-spacer {
-  background-color: rgb(204 204 204 / 12%);
-  height: 10px;
+  background-color: rgb(81 84 87 / 16%);
+  height: 1px;
   width: 100%;
   margin: 0;
- 
- 
 }
 
 /* ----------- HEADER ---------- */
@@ -347,6 +345,7 @@ select {
   
 }
 
+
 .skills .content .col-left{
   position: relative;
   width: 46%;
@@ -372,6 +371,11 @@ select {
   justify-content: space-between;
   margin-bottom: 5px;
 }
+
+.skills .content .column.col-left a{
+  color: #0022d1bd;
+}
+
 
 .skills .content .col-right .bar .info span{
   font-size: 18px;
@@ -403,25 +407,31 @@ select {
 
 .skills .content .col-right .bar .css:before{
   width: 90%;
-  background: #0022d1bd;;
+  background: #0022d1bd;
   border-radius: 20px ;
 }
 
 .skills .content .col-right .bar .javascript:before{
   width: 80%;
-  background: #0022d1bd;;
+  background: #0022d1bd;
   border-radius: 20px ;
 }
 
 .skills .content .col-right .bar .react:before{
   width: 70%;
-  background: #0022d1bd;;
+  background: #0022d1bd;
+  border-radius: 20px ;
+}
+
+.skills .content .col-right .bar .typescript:before{
+  width: 61%;
+  background: #0022d1bd;
   border-radius: 20px ;
 }
 
 .skills .content .col-right .bar .node:before{
-  width: 53%;
-  background: #0022d1bd;;
+  width: 70%;
+  background: #0022d1bd;
   border-radius: 20px ;
 }
 
@@ -592,6 +602,7 @@ input[type="submit"] {
 
 
 
+
 /* ---------- FOOTER ---------- */
 .footer{
   background: #000016;
@@ -742,6 +753,11 @@ input:checked + .slider .moon-icon {
 
 
 /* DARK MODE COLOR */
+
+body.darkmode .skills .content .column.col-left a {
+  color: #91a3ff;
+}
+
 body.darkmode {
   background: #222;
   color: #ddd;

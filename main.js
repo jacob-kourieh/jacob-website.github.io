@@ -54,21 +54,21 @@ function reveal() {
   }
 }
 
-
+//Multi Language
 const btn = document.getElementById('button');
 const form = document.getElementById('form');
 
-// Function to get the current language
+//Function to get the current language
 const getCurrentLanguage = () => localStorage.getItem("lang") || "en";
 
-// Function to clear the input fields
+//Function to clear the input fields
 const clearInputFields = () => {
   document.getElementById("from_name").value = "";
   document.getElementById("reply_to").value = "";
   document.getElementById("message").value = "";
 };
 
-// Form submission event listener
+
 form.addEventListener('submit', function (event) {
   event.preventDefault();
 
@@ -91,7 +91,7 @@ form.addEventListener('submit', function (event) {
     });
 });
 
-// Change language event listener
+
 const languageSelector = document.querySelector("select");
 languageSelector.addEventListener("change", (event) => {
   const selectedLanguage = event.target.value;
@@ -100,101 +100,19 @@ languageSelector.addEventListener("change", (event) => {
   clearInputFields();
 });
 
-// Set language function
+
 const setLanguage = (language) => {
   const elements = document.querySelectorAll("[data-i18n]");
   elements.forEach((element) => {
     const translationKey = element.getAttribute("data-i18n");
-    element.textContent = translations[language][translationKey];
+    element.innerHTML = translations[language][translationKey];
   });
 
-  // Update the placeholders
+
   document.getElementById("from_name").placeholder = translations[language].placeholderName;
   document.getElementById("reply_to").placeholder = translations[language].placeholderEmail;
   document.getElementById("message").placeholder = translations[language].placeholderMessage;
-
-  // Update the send button's value
   document.getElementById("button").value = translations[language].send;
 };
-
-
-
-// // Dark mode toggle
-// const darkmodeToggles = document.querySelectorAll(".darkmode-toggle");
-
-// function handleDarkmodeToggle() {
-//   document.body.classList.toggle("darkmode");
-//   localStorage.setItem("darkmode", this.checked);
-//   darkmodeToggles.forEach((toggle) => {
-//     if (toggle !== this) {
-//       toggle.checked = this.checked;
-//     }
-//   });
-// }
-
-// darkmodeToggles.forEach((toggle) => {
-//   toggle.addEventListener("change", handleDarkmodeToggle);
-// });
-
-// // Check if dark mode was previously enabled
-// if (localStorage.getItem("darkmode") === "true") {
-//   document.body.classList.add("darkmode");
-//   darkmodeToggles.forEach((toggle) => {
-//     toggle.checked = true;
-//   });
-// } else if (localStorage.getItem("darkmode") === null) {
-//   // If no preference was set, use system preference
-//   const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-//   if (isDarkMode) {
-//     document.body.classList.add("darkmode");
-//     darkmodeToggles.forEach((toggle) => {
-//       toggle.checked = true;
-//     });
-//   }
-// }
-
-
-// Dark mode toggle
-const darkmodeToggles = document.querySelectorAll(".darkmode-toggle");
-
-function handleDarkmodeToggle() {
-  document.body.classList.toggle("darkmode");
-  localStorage.setItem("darkmode", this.checked);
-  darkmodeToggles.forEach((toggle) => {
-    if (toggle !== this) {
-      toggle.checked = this.checked;
-    }
-  });
-}
-
-darkmodeToggles.forEach((toggle) => {
-  toggle.addEventListener("change", handleDarkmodeToggle);
-});
-
-function isDarkTime() {
-  const now = new Date();
-  const hours = now.getHours();
-  return hours >= 20 || hours < 6;
-}
-
-// Check if dark mode was previously enabled
-if (localStorage.getItem("darkmode") === "true") {
-  document.body.classList.add("darkmode");
-  darkmodeToggles.forEach((toggle) => {
-    toggle.checked = true;
-  });
-} else if (localStorage.getItem("darkmode") === null) {
-  // If no preference was set, use system preference
-  const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  if (isDarkMode || isDarkTime()) {
-    document.body.classList.add("darkmode");
-    darkmodeToggles.forEach((toggle) => {
-      toggle.checked = true;
-    });
-  }
-}
-
-
-
 
 //The website created by © Jacob Kourieh.
