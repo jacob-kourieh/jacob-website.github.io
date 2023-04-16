@@ -139,7 +139,29 @@
     </div>
   </section>
 
-  <div class="colored-spacer"></div>
+  <!-- <div class="colored-spacer"></div> -->
+
+  <div class="colored-spacer-city">
+    <p class="game-text">Explore a random city from my project! Take a quick tour, test, or just check it out.</p>
+    <img id="arrowBtn" src="/images/down-arrow.svg" alt="arrow down" style="cursor: pointer;" />
+    <div id="dropdownContainer" style="display:none;">
+      <p>Looking for a holiday destination or a vacation spot, but unsure where to go? Discover a random city by
+        clicking the button below!</p>
+      <button id="randomCityBtn">Get a Random City</button>
+      <div id="loading" style="display:none;">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div id="cityInfo" style="display:none;"></div>
+      <button id="tryAgainBtn" style="display:none;">Try Again</button>
+      <a id="googleLink" href="#" target="_blank" style="display:none;">
+        <button>Find on Google</button>
+      </a>
+    </div>
+  </div>
+
+
 
   <section class="skills" id="skills">
     <div class="title reveal">
@@ -349,6 +371,7 @@
 
   <script type="module" src="main.js"></script>
   <script src="darkmode.js"></script>
+  <script src="randomcity.js"></script>
 
 </body>
 

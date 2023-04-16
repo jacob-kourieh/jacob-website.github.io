@@ -93,3 +93,4 @@ function handleDarkmodeToggle() {
 darkmodeToggles.forEach((toggle) => {
     toggle.addEventListener("change", handleDarkmodeToggle);
 });
+

@@ -115,4 +115,8 @@ const setLanguage = (language) => {
   document.getElementById("button").value = translations[language].send;
 };
 
+
+
+
+
 //The website created by © Jacob Kourieh.

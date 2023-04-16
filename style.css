@@ -51,6 +51,96 @@ section{
   /* box-shadow: 0 2px 23px rgb(1 1 1 / 15%); */
 }
 
+
+/* Random City  */
+.colored-spacer-city {
+  background-color: rgb(81 84 87 / 16%);
+  height: auto;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.game-text {
+  margin-bottom: 10px;
+}
+
+#arrowBtn {
+  width: 30px;
+  height: auto;
+}
+
+#randomCityBtn,
+#tryAgainBtn,
+#googleLink button {
+  background-color: #3a6cf4;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#dropdownContainer {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#loading {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3a6cf4;
+  animation: blinking 1.5s infinite;
+}
+
+.circle:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.circle:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes blinking {
+  50% {
+    opacity: 0;
+  }
+}
+
+#cityInfo {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+#cityInfo h2 {
+  margin-top: 0;
+}
+
+#cityInfo img {
+  width: 100%;
+  height: auto;
+}
+
+/* Space */
 .colored-spacer {
   background-color: rgb(81 84 87 / 16%);
   height: 1px;
@@ -806,6 +896,14 @@ body.darkmode header.sticky .navigation a:hover {
   color: #3a6cf4
 }
 
+
+body.darkmode #dropdownContainer {
+  background-color: #222;
+}
+
+body.darkmode #cityInfo {
+  background-color: #000016;
+}
 
 
 /* ---------- MOBIL VERSION ---------- */
