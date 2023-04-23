@@ -1068,6 +1068,7 @@ body.darkmode #cityInfo {
 
 /* music */
 .colored-spacer-song {
+  position: relative;
   background-color: rgb(81 84 87 / 16%);
   height: auto;
   width: 100%;
@@ -1104,8 +1105,8 @@ body.darkmode #cityInfo {
 }
 
 .player-controls {
-  width: 48px;
-  height: 48px;
+  width: 54px;
+  height: 70px;
   background-image: url("/images/play.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -1145,8 +1146,8 @@ body.darkmode #cityInfo {
   border: 3px solid #f3f3f3;
   border-radius: 50%;
   border-top: 3px solid #3498db;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   animation: spin 2s linear infinite;
 }
 
@@ -1157,4 +1158,62 @@ body.darkmode #cityInfo {
   100% {
     transform: rotate(360deg);
   }
+}
+
+#song-info h3,
+#song-info h5 {
+  margin: 0;
+}
+
+.error-message {
+  color: red;
+  font-size: 16px;
+}
+
+.choices {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 10px;
+}
+
+.choices__list--single {
+  height: 38px;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.custom-select {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  padding-right: 30px;
+}
+
+.select-icon {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  height: 100%;
+  width: 30px;
+  pointer-events: none;
+  background-image: url("/images/list-down.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.made-text {
+  position: absolute;
+  right: 23px;
+  bottom: 16px;
+  padding: 5px;
+  font-size: x-small;
+  font-family: fangsong;
 }
