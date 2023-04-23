@@ -30,6 +30,7 @@
   <script type="text/javascript">
     emailjs.init('CqsjiW6hHD_LdRD5P')
   </script>
+
 </head>
 
 
@@ -239,7 +240,50 @@
     </div>
   </section>
 
-  <div class="colored-spacer"></div>
+
+  <!-- <div class="colored-spacer"></div> -->
+  <!-- <div class="space-music">
+    <p class="music-text">Explore a random song from my project! Take a quick tour, test, or just check it out.</p>
+    <img id="arrowBtn" src="/images/down-arrow.svg" alt="arrow down" style="cursor: pointer;" />
+    
+    <p>Looking for a music or just selsect a genre and then get your random song!</p>
+    <select id="genre-select">
+      <option value="">Select a genre</option>
+    </select>
+    <button id="get-random-song">Get a random song</button>
+    <div id="player-container">
+      <div class="loading">
+        <div class="loading-content">
+          <div class="loading-circle"></div>
+          <span class="loading-name">LOADING</span>
+        </div>
+      </div>
+      <audio id="player" controls>
+        Your browser does not support the audio element.
+      </audio>
+      <span id="song-info"></span>
+    </div>
+  </div> -->
+
+  <div class="colored-spacer-song">
+    <p class="game-text">Discover a random song from my music project! Listen, test, or just enjoy.</p>
+    <img id="arrowBtnSong" src="/images/down-arrow.svg" alt="arrow down" style="cursor: pointer;" />
+    <div id="dropdownContainerSong" style="display:none;">
+      <p>Select a genre and click the button to discover a random song!</p>
+      <select id="genre-select"></select>
+      <button id="get-random-song">Get Random Song</button>
+      <div class="playerContainer">
+        <div class="player-info">
+          <div id="loading-animation" class="circle-loading"></div>
+          <audio id="player" controls style="display:none;"></audio>
+          <div class="player-controls"></div>
+          <div id="song-info"></div>
+        </div>
+        <button id="try-again-song" style="display:none;">Try Again</button>
+      </div>
+    </div>
+  </div>
+
 
   <section class="work" id="work">
     <div class="title reveal">
@@ -372,6 +416,7 @@
   <script type="module" src="main.js"></script>
   <script src="darkmode.js"></script>
   <script src="randomcity.js"></script>
+  <script src="randomsong.js"></script>
 
 </body>
 

@@ -117,6 +117,4 @@ const setLanguage = (language) => {
 
 
 
-
-
 //The website created by © Jacob Kourieh.

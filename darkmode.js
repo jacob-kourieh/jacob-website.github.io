@@ -1,42 +1,42 @@
-//Dark mode toggling based on the calculated sunset time by use an IP-based geolocation API to get the user's approximate location.
+// Automatically enable dark mode during sunset and normal mode during sunrise based on the user's location.
 
-function enableDarkMode() {
+function activateDarkMode() {
     document.body.classList.add('darkmode');
 }
 
-function disableDarkMode() {
+function deactivateDarkMode() {
     document.body.classList.remove('darkmode');
 }
 
-function applyDarkModeBasedOnSunset(latitude, longitude) {
-    const date = new Date();
-    const timezoneOffset = date.getTimezoneOffset() / 60;
-    const dayOfYear = getDayOfYear(date);
-    const sunsetTime = getSunsetTime(latitude, longitude, timezoneOffset, dayOfYear);
+function setDarkModeBySunset(latitude, longitude) {
+    const currentDate = new Date();
+    const timezoneOffset = currentDate.getTimezoneOffset() / 60;
+    const dayOfYear = getCurrentDayOfYear(currentDate);
+    const sunsetTimestamp = calculateSunsetTime(latitude, longitude, timezoneOffset, dayOfYear);
 
-    if (date > sunsetTime) {
-        enableDarkMode();
-        darkmodeToggles.forEach((toggle) => {
+    if (currentDate > sunsetTimestamp) {
+        activateDarkMode();
+        darkModeToggles.forEach((toggle) => {
             toggle.checked = true;
         });
         localStorage.setItem("darkmode", true);
     } else {
-        disableDarkMode();
-        darkmodeToggles.forEach((toggle) => {
+        deactivateDarkMode();
+        darkModeToggles.forEach((toggle) => {
             toggle.checked = false;
         });
         localStorage.setItem("darkmode", false);
     }
 }
 
-function getDayOfYear(date) {
-    const startOfYear = new Date(date.getFullYear(), 0, 0);
-    const diff = date - startOfYear;
+function getCurrentDayOfYear(date) {
+    const yearStart = new Date(date.getFullYear(), 0, 0);
+    const difference = date - yearStart;
     const oneDay = 1000 * 60 * 60 * 24;
-    return Math.floor(diff / oneDay);
+    return Math.floor(difference / oneDay);
 }
 
-function getSunsetTime(latitude, longitude, timezoneOffset, dayOfYear) {
+function calculateSunsetTime(latitude, longitude, timezoneOffset, dayOfYear) {
     const gamma = -0.10471975512;
     const dayAngle = 0.01720212481 * dayOfYear - 1.73324438;
     const solarNoon = 12 + (longitude / 15) - timezoneOffset;
@@ -48,14 +48,13 @@ function getSunsetTime(latitude, longitude, timezoneOffset, dayOfYear) {
     return new Date().setHours(sunsetTime, 0, 0, 0);
 }
 
-// Get the user's location based on their IP address
-async function getIpAddress() {
-    const response = await fetch("https://api.ipify.org?format=json");
+async function fetchIpAddress() {
+    const response = await fetch("https://api.ipify.org/?format=json");
     const data = await response.json();
     return data.ip;
 }
 
-async function getLocationByIp(ipAddress) {
+async function fetchLocationByIp(ipAddress) {
     const response = await fetch(`https://ipapi.co/${ipAddress}/json/`);
     const data = await response.json();
     return {
@@ -64,33 +63,30 @@ async function getLocationByIp(ipAddress) {
     };
 }
 
-// Call the functions to apply dark mode based on sunset time
-getIpAddress()
-    .then(getLocationByIp)
+fetchIpAddress()
+    .then(fetchLocationByIp)
     .then((location) => {
-        applyDarkModeBasedOnSunset(location.latitude, location.longitude);
+        setDarkModeBySunset(location.latitude, location.longitude);
     });
 
-// --- Dark Mode toggling ---
-const darkmodeToggles = document.querySelectorAll(".darkmode-toggle");
+const darkModeToggles = document.querySelectorAll(".darkmode-toggle");
 
-function handleDarkmodeToggle() {
+function toggleDarkMode() {
     if (this.checked) {
-        enableDarkMode();
+        activateDarkMode();
         localStorage.setItem("darkmode", true);
     } else {
-        disableDarkMode();
+        deactivateDarkMode();
         localStorage.setItem("darkmode", false);
     }
 
-    darkmodeToggles.forEach((toggle) => {
+    darkModeToggles.forEach((toggle) => {
         if (toggle !== this) {
             toggle.checked = this.checked;
         }
     });
 }
 
-darkmodeToggles.forEach((toggle) => {
-    toggle.addEventListener("change", handleDarkmodeToggle);
+darkModeToggles.forEach((toggle) => {
+    toggle.addEventListener("change", toggleDarkMode);
 });
-

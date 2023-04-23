@@ -146,6 +146,7 @@ section{
   height: 1px;
   width: 100%;
   margin: 0;
+  text-align: center;
 }
 
 /* ----------- HEADER ---------- */
@@ -897,7 +898,8 @@ body.darkmode header.sticky .navigation a:hover {
 }
 
 
-body.darkmode #dropdownContainer {
+body.darkmode #dropdownContainer,
+body.darkmode #dropdownContainerSong {
   background-color: #222;
 }
 
@@ -1063,3 +1065,96 @@ body.darkmode #cityInfo {
   --light-text: #1a1a1a;
 } */
 
+
+/* music */
+.colored-spacer-song {
+  background-color: rgb(81 84 87 / 16%);
+  height: auto;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+#arrowBtnSong {
+  width: 30px;
+  height: auto;
+}
+
+#dropdownContainerSong {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#genre-select,
+#get-random-song,
+#try-again-song {
+  background-color: #3a6cf4;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.player-controls {
+  width: 48px;
+  height: 48px;
+  background-image: url("/images/play.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+}
+
+.player-controls.playing {
+  background-image: url("/images/pause.svg");
+}
+
+.player-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#song-info {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.playerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-info{
+  display: flex;
+  align-items: center;
+
+}
+
+.circle-loading {
+  display: none;
+  border: 3px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 3px solid #3498db;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
