@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", initSong);
 
 async function initSong() {
@@ -39,6 +40,13 @@ function updateGetRandomSongButton() {
 }
 
 
+function searchSongOnSpotify(songTitle, artistName) {
+    const searchQuery = encodeURIComponent(`${songTitle} ${artistName}`);
+    const searchUrl = `https://open.spotify.com/search/${searchQuery}`;
+    window.open(searchUrl, "_blank");
+}
+
+
 function setupEventListenersSong() {
     const arrowBtnSong = document.getElementById("arrowBtnSong");
     arrowBtnSong.addEventListener("click", () => {
@@ -56,6 +64,14 @@ function setupEventListenersSong() {
 
     const playerControls = document.querySelector(".player-controls");
     playerControls.addEventListener("click", togglePlayback);
+
+    const findSpotifyBtn = document.getElementById("find-spotify-song");
+    findSpotifyBtn.addEventListener("click", () => {
+        const songTitle = document.querySelector("#song-info h3").textContent;
+        const artistName = document.querySelector("#song-info h5").textContent;
+        searchSongOnSpotify(songTitle, artistName);
+    });
+
 }
 
 function toggleDropdownSong() {
@@ -105,12 +121,14 @@ async function fetchRandomSong() {
         if (randomSong) {
             const songInfoElement = document.getElementById("song-info");
             const tryAgainBtnSong = document.getElementById("try-again-song");
+            const findSpotify = document.getElementById("find-spotify-song");
 
             player.src = randomSong.preview;
             player.load();
 
             songInfoElement.innerHTML = `<h3>${randomSong.title}</h3><h5>${randomSong.artist.name}</h5>`;
             tryAgainBtnSong.style.display = "block";
+            findSpotify.style.display = "block";
 
             hideLoadingAnimation();
             displayPlayerControls();
@@ -166,6 +184,7 @@ function resetDropdownSong() {
     const songInfoElement = document.getElementById("song-info");
     const genreSelect = document.getElementById("genre-select");
     const getRandomSongBtn = document.getElementById("get-random-song");
+    const findSpotify = document.getElementById("find-spotify-song");
 
     player.pause();
     player.src = "";
@@ -173,6 +192,7 @@ function resetDropdownSong() {
     playerControls.style.display = "none";
     songInfoElement.innerHTML = "";
     tryAgainBtnSong.style.display = "none";
+    findSpotify.style.display = "none";
     genreSelect.value = "";
     getRandomSongBtn.disabled = true;
     updateGetRandomSongButton();
@@ -188,8 +208,10 @@ function showPlayerAndInfo() {
     const player = document.getElementById("player");
     const songInfoElement = document.getElementById("song-info");
     const tryAgainBtnSong = document.getElementById("try-again-song");
+    const findSpotify = document.getElementById("find-spotify-song");
 
     player.style.display = "block";
     songInfoElement.style.display = "block";
     tryAgainBtnSong.style.display = "block";
+    findSpotify.style.display = "block";
 }

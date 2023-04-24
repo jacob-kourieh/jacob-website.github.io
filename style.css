@@ -75,16 +75,17 @@ section{
 #tryAgainBtn,
 #googleLink button {
   background-color: #3a6cf4;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 10px;
-  cursor: pointer;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
 }
+
 
 #dropdownContainer {
   background-color: #f1f1f1;
@@ -317,7 +318,7 @@ select {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 1px;
-  border-radius: 2px;
+  border-radius: 5px;
   margin-top: 30px;
   transition: 0.5s ease;
 }
@@ -1089,9 +1090,9 @@ body.darkmode #cityInfo {
   margin-top: 10px;
 }
 
-#genre-select,
 #get-random-song,
-#try-again-song {
+#try-again-song,
+#find-spotify-song {
   background-color: #3a6cf4;
   border: none;
   color: white;
@@ -1099,9 +1100,22 @@ body.darkmode #cityInfo {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
   margin: 10px;
   cursor: pointer;
+  border-radius: 5px;
+}
+
+#genre-select {
+  background-color: #3a6cf4;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .player-controls {
@@ -1146,8 +1160,8 @@ body.darkmode #cityInfo {
   border: 3px solid #f3f3f3;
   border-radius: 50%;
   border-top: 3px solid #3498db;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   animation: spin 2s linear infinite;
 }
 
@@ -1216,4 +1230,8 @@ body.darkmode #cityInfo {
   padding: 5px;
   font-size: x-small;
   font-family: fangsong;
+}
+
+.try-find-spotify {
+  display: flex;
 }

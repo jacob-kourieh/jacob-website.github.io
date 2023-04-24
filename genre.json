@@ -70,26 +70,6 @@
         "type": "genre"
     },
     {
-        "id": 85,
-        "name": "Alternative",
-        "picture": "https://api.deezer.com/genre/85/image",
-        "picture_small": "https://e-cdns-images.dzcdn.net/images/misc/fd252ab727d9a3b0b3c29014873f8f57/56x56-000000-80-0-0.jpg",
-        "picture_medium": "https://e-cdns-images.dzcdn.net/images/misc/fd252ab727d9a3b0b3c29014873f8f57/250x250-000000-80-0-0.jpg",
-        "picture_big": "https://e-cdns-images.dzcdn.net/images/misc/fd252ab727d9a3b0b3c29014873f8f57/500x500-000000-80-0-0.jpg",
-        "picture_xl": "https://e-cdns-images.dzcdn.net/images/misc/fd252ab727d9a3b0b3c29014873f8f57/1000x1000-000000-80-0-0.jpg",
-        "type": "genre"
-    },
-    {
-        "id": 186,
-        "name": "Christian",
-        "picture": "https://api.deezer.com/genre/186/image",
-        "picture_small": "https://e-cdns-images.dzcdn.net/images/misc/e658e2ba682088f4d4b44f39c400d69d/56x56-000000-80-0-0.jpg",
-        "picture_medium": "https://e-cdns-images.dzcdn.net/images/misc/e658e2ba682088f4d4b44f39c400d69d/250x250-000000-80-0-0.jpg",
-        "picture_big": "https://e-cdns-images.dzcdn.net/images/misc/e658e2ba682088f4d4b44f39c400d69d/500x500-000000-80-0-0.jpg",
-        "picture_xl": "https://e-cdns-images.dzcdn.net/images/misc/e658e2ba682088f4d4b44f39c400d69d/1000x1000-000000-80-0-0.jpg",
-        "type": "genre"
-    },
-    {
         "id": 106,
         "name": "Electro",
         "picture": "https://api.deezer.com/genre/106/image",
@@ -97,6 +77,16 @@
         "picture_medium": "https://e-cdns-images.dzcdn.net/images/misc/15df4502c1c58137dae5bdd1cc6f0251/250x250-000000-80-0-0.jpg",
         "picture_big": "https://e-cdns-images.dzcdn.net/images/misc/15df4502c1c58137dae5bdd1cc6f0251/500x500-000000-80-0-0.jpg",
         "picture_xl": "https://e-cdns-images.dzcdn.net/images/misc/15df4502c1c58137dae5bdd1cc6f0251/1000x1000-000000-80-0-0.jpg",
+        "type": "genre"
+    },
+    {
+        "id": 197,
+        "name": "Latin Music",
+        "picture": "https://api.deezer.com/genre/197/image",
+        "picture_small": "https://e-cdns-images.dzcdn.net/images/misc/069c9888538799748960781f098b5f4b/56x56-000000-80-0-0.jpg",
+        "picture_medium": "https://e-cdns-images.dzcdn.net/images/misc/069c9888538799748960781f098b5f4b/250x250-000000-80-0-0.jpg",
+        "picture_big": "https://e-cdns-images.dzcdn.net/images/misc/069c9888538799748960781f098b5f4b/500x500-000000-80-0-0.jpg",
+        "picture_xl": "https://e-cdns-images.dzcdn.net/images/misc/069c9888538799748960781f098b5f4b/1000x1000-000000-80-0-0.jpg",
         "type": "genre"
     },
     {
@@ -150,16 +140,6 @@
         "type": "genre"
     },
     {
-        "id": 65,
-        "name": "Traditional Mexicano",
-        "picture": "https://api.deezer.com/genre/65/image",
-        "picture_small": "https://e-cdns-images.dzcdn.net/images/misc/0935a03b26d8a96964920a426de97dae/56x56-000000-80-0-0.jpg",
-        "picture_medium": "https://e-cdns-images.dzcdn.net/images/misc/0935a03b26d8a96964920a426de97dae/250x250-000000-80-0-0.jpg",
-        "picture_big": "https://e-cdns-images.dzcdn.net/images/misc/0935a03b26d8a96964920a426de97dae/500x500-000000-80-0-0.jpg",
-        "picture_xl": "https://e-cdns-images.dzcdn.net/images/misc/0935a03b26d8a96964920a426de97dae/1000x1000-000000-80-0-0.jpg",
-        "type": "genre"
-    },
-    {
         "id": 98,
         "name": "Classical",
         "picture": "https://api.deezer.com/genre/98/image",
@@ -167,6 +147,16 @@
         "picture_medium": "https://e-cdns-images.dzcdn.net/images/misc/609f69b669b242252aa8ee09b5597655/250x250-000000-80-0-0.jpg",
         "picture_big": "https://e-cdns-images.dzcdn.net/images/misc/609f69b669b242252aa8ee09b5597655/500x500-000000-80-0-0.jpg",
         "picture_xl": "https://e-cdns-images.dzcdn.net/images/misc/609f69b669b242252aa8ee09b5597655/1000x1000-000000-80-0-0.jpg",
+        "type": "genre"
+    },
+    {
+        "id": 85,
+        "name": "Alternative",
+        "picture": "https://api.deezer.com/genre/85/image",
+        "picture_small": "https://e-cdns-images.dzcdn.net/images/misc/fd252ab727d9a3b0b3c29014873f8f57/56x56-000000-80-0-0.jpg",
+        "picture_medium": "https://e-cdns-images.dzcdn.net/images/misc/fd252ab727d9a3b0b3c29014873f8f57/250x250-000000-80-0-0.jpg",
+        "picture_big": "https://e-cdns-images.dzcdn.net/images/misc/fd252ab727d9a3b0b3c29014873f8f57/500x500-000000-80-0-0.jpg",
+        "picture_xl": "https://e-cdns-images.dzcdn.net/images/misc/fd252ab727d9a3b0b3c29014873f8f57/1000x1000-000000-80-0-0.jpg",
         "type": "genre"
     },
     {
@@ -210,16 +200,6 @@
         "type": "genre"
     },
     {
-        "id": 16,
-        "name": "Asian Music",
-        "picture": "https://api.deezer.com/genre/16/image",
-        "picture_small": "https://e-cdns-images.dzcdn.net/images/misc/dd6d2756465b22488dff5d8663e86688/56x56-000000-80-0-0.jpg",
-        "picture_medium": "https://e-cdns-images.dzcdn.net/images/misc/dd6d2756465b22488dff5d8663e86688/250x250-000000-80-0-0.jpg",
-        "picture_big": "https://e-cdns-images.dzcdn.net/images/misc/dd6d2756465b22488dff5d8663e86688/500x500-000000-80-0-0.jpg",
-        "picture_xl": "https://e-cdns-images.dzcdn.net/images/misc/dd6d2756465b22488dff5d8663e86688/1000x1000-000000-80-0-0.jpg",
-        "type": "genre"
-    },
-    {
         "id": 153,
         "name": "Blues",
         "picture": "https://api.deezer.com/genre/153/image",
@@ -247,36 +227,6 @@
         "picture_medium": "https://e-cdns-images.dzcdn.net/images/misc/ffd77feba2c8fda79b18183861e4e69f/250x250-000000-80-0-0.jpg",
         "picture_big": "https://e-cdns-images.dzcdn.net/images/misc/ffd77feba2c8fda79b18183861e4e69f/500x500-000000-80-0-0.jpg",
         "picture_xl": "https://e-cdns-images.dzcdn.net/images/misc/ffd77feba2c8fda79b18183861e4e69f/1000x1000-000000-80-0-0.jpg",
-        "type": "genre"
-    },
-    {
-        "id": 81,
-        "name": "Indian Music",
-        "picture": "https://api.deezer.com/genre/81/image",
-        "picture_small": "https://e-cdns-images.dzcdn.net/images/misc/b098161d9a824eef314bc38b985594a1/56x56-000000-80-0-0.jpg",
-        "picture_medium": "https://e-cdns-images.dzcdn.net/images/misc/b098161d9a824eef314bc38b985594a1/250x250-000000-80-0-0.jpg",
-        "picture_big": "https://e-cdns-images.dzcdn.net/images/misc/b098161d9a824eef314bc38b985594a1/500x500-000000-80-0-0.jpg",
-        "picture_xl": "https://e-cdns-images.dzcdn.net/images/misc/b098161d9a824eef314bc38b985594a1/1000x1000-000000-80-0-0.jpg",
-        "type": "genre"
-    },
-    {
-        "id": 95,
-        "name": "Kids",
-        "picture": "https://api.deezer.com/genre/95/image",
-        "picture_small": "https://e-cdns-images.dzcdn.net/images/misc/b0b8efcbc3cb688864ce69da0061e525/56x56-000000-80-0-0.jpg",
-        "picture_medium": "https://e-cdns-images.dzcdn.net/images/misc/b0b8efcbc3cb688864ce69da0061e525/250x250-000000-80-0-0.jpg",
-        "picture_big": "https://e-cdns-images.dzcdn.net/images/misc/b0b8efcbc3cb688864ce69da0061e525/500x500-000000-80-0-0.jpg",
-        "picture_xl": "https://e-cdns-images.dzcdn.net/images/misc/b0b8efcbc3cb688864ce69da0061e525/1000x1000-000000-80-0-0.jpg",
-        "type": "genre"
-    },
-    {
-        "id": 197,
-        "name": "Latin Music",
-        "picture": "https://api.deezer.com/genre/197/image",
-        "picture_small": "https://e-cdns-images.dzcdn.net/images/misc/069c9888538799748960781f098b5f4b/56x56-000000-80-0-0.jpg",
-        "picture_medium": "https://e-cdns-images.dzcdn.net/images/misc/069c9888538799748960781f098b5f4b/250x250-000000-80-0-0.jpg",
-        "picture_big": "https://e-cdns-images.dzcdn.net/images/misc/069c9888538799748960781f098b5f4b/500x500-000000-80-0-0.jpg",
-        "picture_xl": "https://e-cdns-images.dzcdn.net/images/misc/069c9888538799748960781f098b5f4b/1000x1000-000000-80-0-0.jpg",
         "type": "genre"
     }
 ]
