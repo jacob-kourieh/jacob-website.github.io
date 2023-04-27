@@ -7,7 +7,7 @@ const googleLink = document.getElementById("googleLink");
 const loading = document.getElementById("loading");
 const cityInfo = document.getElementById("cityInfo");
 
-const url = "https://backend-city-be57nqltj-jacob-kourieh.vercel.app/cities.json";
+const url = "https://backend-city-api-git-master-jacob-kourieh.vercel.app/cities.json";
 let cities = [];
 
 fetch(url)
