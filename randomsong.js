@@ -96,7 +96,7 @@ async function fetchRandomSong() {
     showLoadingAnimation();
     resetPlayer();
 
-    const corsProxy = "https://api.allorigins.win/raw?url=";
+    const corsProxy = "https://jacob-website-jacob-kourieh.vercel.app/api/cors-proxy?url=";
 
     try {
         const response = await fetch(`${corsProxy}https://api.deezer.com/genre/${genreId}/artists`);

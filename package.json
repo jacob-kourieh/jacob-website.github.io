@@ -1,0 +1,12 @@
+{
+    "name": "jacob-portfolio",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "start": "vercel dev",
+        "deploy": "vercel --prod"
+    },
+    "dependencies": {
+        "node-fetch": "^2.6.7"
+    }
+}
