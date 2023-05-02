@@ -1,4 +1,4 @@
-// api/cors-proxy.js
+// api/cors-proxy
 const fetch = require("node-fetch");
 
 module.exports = async (req, res) => {

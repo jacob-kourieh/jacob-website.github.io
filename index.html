@@ -32,7 +32,7 @@
 </head>
 
 
-<body>
+<body class="hide-content">
   <div class="scrollToTop-btn">
     <i class="fas fa-angle-up"></i>
   </div>
@@ -73,7 +73,7 @@
       <select name="format" id="format">
         <option value="en" selected>En</option>
         <option value="sv">Sv</option>
-        <!-- <option value="es">Es</option> -->
+        <option value="es">Es</option>
       </select>
     </div>
   </header>
@@ -138,7 +138,6 @@
     </div>
   </section>
 
-  <!-- <div class="colored-spacer"></div> -->
 
   <div class="colored-spacer-city">
     <p class="game-text" data-i18n="citytext1">Explore a random city from my project! Take a quick tour, test, or just
@@ -342,7 +341,26 @@
     </div>
   </section>
 
-  <div class="colored-spacer"></div>
+  <div class="colored-spacer-quiz">
+    <p class="game-text" data-i18n="quiztext1">Test your knowledge with this quiz about countries' flags and capitals.
+      Choose a category and start the quiz!</p>
+    <img id="quizArrowBtn" src="/images/down-arrow.svg" alt="arrow down" style="cursor: pointer;" />
+    <div id="quizDropdownContainer" style="display:none;">
+      <label for="quizCategory" id="categoryLabel" data-i18n="quiztext2">Choose a category:</label>
+      <div class="custom-select">
+        <select id="quizCategory">
+          <option value="flags" data-i18n="flags">Flags</option>
+          <option value="capitals" data-i18n="capitals">Capitals</option>
+        </select>
+        <span class="select-icon"></span>
+      </div>
+      <br>
+      <button id="startQuizBtn" data-i18n="startQuizBtn">Start Quiz</button>
+      <div id="quizContainer" style="display:none;"></div>
+    </div>
+  </div>
+
+
 
   <section class="contact" id="contact">
     <div class="title reveal">
@@ -402,6 +420,7 @@
   <script src="darkmode.js"></script>
   <script src="randomcity.js"></script>
   <script src="randomsong.js"></script>
+  <script type="module" src="quiz.js"></script>
 
 </body>
 

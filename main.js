@@ -113,8 +113,20 @@ const setLanguage = (language) => {
   document.getElementById("reply_to").placeholder = translations[language].placeholderEmail;
   document.getElementById("message").placeholder = translations[language].placeholderMessage;
   document.getElementById("button").value = translations[language].send;
+  document.body.classList.remove("hide-content");
 };
 
+// Get the language from the URL parameter, or use the stored language, or the default language
+function getUrlParameter(name) {
+  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+  const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+  const results = regex.exec(location.search);
+  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
 
+const initialLanguage = getUrlParameter('lang') || getCurrentLanguage();
+localStorage.setItem("lang", initialLanguage);
+setLanguage(initialLanguage);
+languageSelector.value = initialLanguage;
 
 //The website created by © Jacob Kourieh.
