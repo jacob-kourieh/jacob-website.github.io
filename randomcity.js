@@ -1,12 +1,4 @@
-//random city
-const arrowBtn = document.getElementById("arrowBtn");
-const dropdownContainer = document.getElementById("dropdownContainer");
-const randomCityBtn = document.getElementById("randomCityBtn");
-const tryAgainBtn = document.getElementById("tryAgainBtn");
-const googleLink = document.getElementById("googleLink");
-const loading = document.getElementById("loading");
-const cityInfo = document.getElementById("cityInfo");
-
+// Fetching city data
 const url = "https://backend-city-api-git-master-jacob-kourieh.vercel.app/cities.json";
 let cities = [];
 
@@ -16,6 +8,7 @@ fetch(url)
         cities = data;
     });
 
+// Functions
 function getRandomCity() {
     if (cities.length === 0) return;
     const randomIndex = Math.floor(Math.random() * cities.length);
@@ -23,7 +16,7 @@ function getRandomCity() {
     return randomCity;
 }
 
-function displayCity(city) {
+function displayCity(city, cityInfo) {
     cityInfo.innerHTML = `
     <h2>${city.city}</h2>
     <img src="${city.img}" alt="${city.city}" />
@@ -32,8 +25,7 @@ function displayCity(city) {
   `;
 }
 
-
-function toggleDropdown() {
+function toggleDropdown(dropdownContainer, arrowBtn) {
     if (dropdownContainer.style.display === "none") {
         dropdownContainer.style.display = "block";
         arrowBtn.src = "/images/up-arrow.svg";
@@ -43,44 +35,78 @@ function toggleDropdown() {
     }
 }
 
-arrowBtn.addEventListener("click", () => {
-    toggleDropdown();
-    if (dropdownContainer.style.display === "none") {
-        resetDropdown();
-    }
-});
-
-function resetDropdown() {
+function resetDropdown(randomCityBtn, loading, cityInfo, tryAgainBtn, googleLink, dropdownContainer) {
     randomCityBtn.style.display = "inline-block";
-    document.querySelector("#dropdownContainer > p").style.display = "block";
+    dropdownContainer.querySelector("p").style.display = "block";
     loading.style.display = "none";
     cityInfo.style.display = "none";
     tryAgainBtn.style.display = "none";
     googleLink.style.display = "none";
 }
 
-randomCityBtn.addEventListener("click", () => {
-    randomCityBtn.style.display = "none";
-    document.querySelector("#dropdownContainer > p").style.display = "none";
-    getAndDisplayCity();
-});
-
-tryAgainBtn.addEventListener("click", () => {
-    getAndDisplayCity();
-});
-
-function getAndDisplayCity() {
+function getAndDisplayCity(loading, cityInfo, tryAgainBtn, googleLink) {
     loading.style.display = "flex";
     cityInfo.style.display = "none";
     tryAgainBtn.style.display = "none";
     googleLink.style.display = "none";
     setTimeout(() => {
         const randomCity = getRandomCity();
-        displayCity(randomCity);
+        displayCity(randomCity, cityInfo);
         loading.style.display = "none";
         cityInfo.style.display = "block";
         tryAgainBtn.style.display = "inline-block";
         googleLink.style.display = "inline-block";
         googleLink.href = `https://www.google.com/search?q=${randomCity.city}`;
-    }, 3000);
+    }, 2000);
 }
+
+function initializeCitySection(citySection) {
+    const arrowBtn = citySection.querySelector("#arrowBtn");
+    const dropdownContainer = citySection.querySelector("#dropdownContainer");
+    const randomCityBtn = citySection.querySelector("#randomCityBtn");
+    const tryAgainBtn = citySection.querySelector("#tryAgainBtn");
+    const googleLink = citySection.querySelector("#googleLink");
+    const loading = citySection.querySelector("#loading");
+    const cityInfo = citySection.querySelector("#cityInfo");
+
+    arrowBtn.addEventListener("click", () => {
+        toggleDropdown(dropdownContainer, arrowBtn);
+        if (dropdownContainer.style.display === "none") {
+            resetDropdown(randomCityBtn, loading, cityInfo, tryAgainBtn, googleLink, dropdownContainer);
+        }
+    });
+
+    randomCityBtn.addEventListener("click", () => {
+        randomCityBtn.style.display = "none";
+        dropdownContainer.querySelector("p").style.display = "none";
+        getAndDisplayCity(loading, cityInfo, tryAgainBtn, googleLink);
+    });
+
+    tryAgainBtn.addEventListener("click", () => {
+        getAndDisplayCity(loading, cityInfo, tryAgainBtn, googleLink);
+    });
+}
+
+// Initialize original and popup city sections
+const citySection = document.getElementById("city");
+const popupCitySection = document.getElementById("popupCity");
+
+initializeCitySection(citySection);
+initializeCitySection(popupCitySection);
+
+// Go to Popup City Button
+const goToPopupCityBtn = document.getElementById("goToPopupCityBtn");
+const popupBg = document.getElementById("popupBg");
+
+goToPopupCityBtn.addEventListener("click", () => {
+    popupCitySection.style.display = "block";
+    popupBg.style.display = "block";
+});
+
+// Close the popup when the close button is clicked
+const closeBtn = document.getElementById("closeBtn");
+
+closeBtn.addEventListener("click", () => {
+    popupCitySection.style.display = "none";
+    popupBg.style.display = "none";
+});
