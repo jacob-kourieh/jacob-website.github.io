@@ -8,13 +8,28 @@ function deactivateDarkMode() {
     document.body.classList.remove('darkmode');
 }
 
-function setDarkModeBySunset(latitude, longitude) {
+async function setDarkModeBySunriseSunset(latitude, longitude) {
     const currentDate = new Date();
-    const timezoneOffset = currentDate.getTimezoneOffset() / 60;
-    const dayOfYear = getCurrentDayOfYear(currentDate);
-    const sunsetTimestamp = calculateSunsetTime(latitude, longitude, timezoneOffset, dayOfYear);
+    const cacheKey = `sunriseSunsetCache-${latitude}-${longitude}`;
+    let sunriseTimestamp, sunsetTimestamp;
 
-    if (currentDate > sunsetTimestamp) {
+    const cachedData = localStorage.getItem(cacheKey);
+    if (cachedData) {
+        const cache = JSON.parse(cachedData);
+        sunriseTimestamp = new Date(cache.sunriseTimestamp);
+        sunsetTimestamp = new Date(cache.sunsetTimestamp);
+    } else {
+        const times = await fetchSunriseSunsetTime(latitude, longitude);
+        sunriseTimestamp = times.sunriseTimestamp;
+        sunsetTimestamp = times.sunsetTimestamp;
+
+        localStorage.setItem(cacheKey, JSON.stringify({
+            sunriseTimestamp: sunriseTimestamp.toISOString(),
+            sunsetTimestamp: sunsetTimestamp.toISOString()
+        }));
+    }
+
+    if (currentDate > sunsetTimestamp || currentDate < sunriseTimestamp) {
         activateDarkMode();
         darkModeToggles.forEach((toggle) => {
             toggle.checked = true;
@@ -29,24 +44,45 @@ function setDarkModeBySunset(latitude, longitude) {
     }
 }
 
-function getCurrentDayOfYear(date) {
-    const yearStart = new Date(date.getFullYear(), 0, 0);
-    const difference = date - yearStart;
-    const oneDay = 1000 * 60 * 60 * 24;
-    return Math.floor(difference / oneDay);
+function applyInitialDarkMode() {
+    const hours = new Date().getHours();
+    const isNightTime = hours < 6 || hours >= 21;
+
+    if (isNightTime) {
+        requestAnimationFrame(() => {
+            activateDarkMode();
+            darkModeToggles.forEach((toggle) => {
+                toggle.checked = true;
+            });
+        });
+    } else {
+        requestAnimationFrame(() => {
+            deactivateDarkMode();
+            darkModeToggles.forEach((toggle) => {
+                toggle.checked = false;
+            });
+        });
+    }
 }
 
-function calculateSunsetTime(latitude, longitude, timezoneOffset, dayOfYear) {
-    const gamma = -0.10471975512;
-    const dayAngle = 0.01720212481 * dayOfYear - 1.73324438;
-    const solarNoon = 12 + (longitude / 15) - timezoneOffset;
-    const solarTime = solarNoon + (gamma * Math.sin(dayAngle));
-    const solarDeclination = 0.40910517667 * Math.sin(dayAngle - 1.40524108);
-    const hourAngle = Math.acos(-Math.tan(latitude) * Math.tan(solarDeclination));
-    const sunsetTime = solarTime + (4 * hourAngle / 60);
+applyInitialDarkMode();
 
-    return new Date().setHours(sunsetTime, 0, 0, 0);
+
+async function fetchSunriseSunsetTime(latitude, longitude) {
+    const response = await fetch(
+        `https://api.sunrise-sunset.org/json?lat=${latitude}&lng=${longitude}&date=today&formatted=0`
+
+    );
+
+    const data = await response.json();
+
+    const sunriseTimestamp = new Date(data.results.sunrise);
+    const sunsetTimestamp = new Date(data.results.sunset);
+
+    return { sunriseTimestamp, sunsetTimestamp };
+
 }
+
 
 async function fetchIpAddress() {
     const response = await fetch("https://api.ipify.org/?format=json");
@@ -61,12 +97,14 @@ async function fetchLocationByIp(ipAddress) {
         latitude: data.latitude,
         longitude: data.longitude,
     };
-}
+};
+
 
 fetchIpAddress()
     .then(fetchLocationByIp)
-    .then((location) => {
-        setDarkModeBySunset(location.latitude, location.longitude);
+    .then(async (location) => {
+        const { latitude, longitude } = location;
+        await setDarkModeBySunriseSunset(latitude, longitude);
     });
 
 const darkModeToggles = document.querySelectorAll(".darkmode-toggle");

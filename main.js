@@ -129,4 +129,16 @@ localStorage.setItem("lang", initialLanguage);
 setLanguage(initialLanguage);
 languageSelector.value = initialLanguage;
 
+
+function updateQueryString(key, value) {
+  const currentUrl = new URL(window.location.href);
+  const urlSearchParams = new URLSearchParams(currentUrl.search);
+  urlSearchParams.set(key, value);
+  currentUrl.search = urlSearchParams.toString();
+
+}
+
+updateQueryString("lang", "en");
+
+
 //The website created by © Jacob Kourieh.

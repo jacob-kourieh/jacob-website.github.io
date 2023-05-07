@@ -1,14 +1,21 @@
-
 document.addEventListener("DOMContentLoaded", initSong);
 
 async function initSong() {
     await loadGenres();
     setupEventListenersSong();
     updateGetRandomSongButton();
+
+    const player = document.getElementById("player");
+    player.addEventListener("ended", handlePlaybackEnd);
+
+    function handlePlaybackEnd() {
+        const playerControls = document.querySelector(".player-controls");
+        playerControls.classList.remove("playing");
+    }
 }
 
 async function loadGenres() {
-    const response = await fetch("/genre.json");
+    const response = await fetch("random-song/genre.json");
     const genres = await response.json();
     populateGenreDropdown(genres);
 }

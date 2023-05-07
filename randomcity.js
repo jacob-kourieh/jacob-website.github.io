@@ -105,8 +105,41 @@ goToPopupCityBtn.addEventListener("click", () => {
 
 // Close the popup when the close button is clicked
 const closeBtn = document.getElementById("closeBtn");
-
 closeBtn.addEventListener("click", () => {
     popupCitySection.style.display = "none";
     popupBg.style.display = "none";
+    const randomCityBtn = popupCitySection.querySelector("#randomCityBtn");
+    const loading = popupCitySection.querySelector("#loading");
+    const cityInfo = popupCitySection.querySelector("#cityInfo");
+    const tryAgainBtn = popupCitySection.querySelector("#tryAgainBtn");
+    const googleLink = popupCitySection.querySelector("#googleLink");
+    const dropdownContainer = popupCitySection.querySelector("#dropdownContainer");
+    resetDropdown(randomCityBtn, loading, cityInfo, tryAgainBtn, googleLink, dropdownContainer);
 });
+
+function openPopupCity() {
+    document.getElementById("popupBg").style.display = "block";
+    document.getElementById("popupCity").style.display = "block";
+}
+
+function closePopupCity() {
+    document.getElementById("popupBg").style.display = "none";
+    document.getElementById("popupCity").style.display = "none";
+    history.pushState(null, "", location.pathname);
+}
+
+
+document.getElementById("closeBtn").addEventListener("click", closePopupCity);
+
+function checkForShowPopupCityParameter() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const showCity = urlParams.get("showcity");
+
+    if (showCity === "true") {
+        openPopupCity();
+    }
+}
+
+checkForShowPopupCityParameter();
+
+// history.pushState(null, "", location.pathname);

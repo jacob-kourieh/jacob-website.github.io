@@ -1,4 +1,4 @@
-import translations from "./modules/translations.js";
+import translations from "../modules/translations.js";
 
 let timerInterval;
 let currentQuestionIndex = 0;

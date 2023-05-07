@@ -115,6 +115,15 @@
         <div class="img-card">
           <img src="images/img-card.jpg" alt="image card Jacob">
         </div>
+        <div class="popup-info-container">
+          <p data-i18n="miniProjectsInfo">Explore my mini projects and find something that interests you. Thanks for
+            visiting!</p>
+          <div class="popup-info-btns">
+            <button class="popup-info-btn" id="goToPopupSongBtn">Random-Song 🎧</button>
+            <button class="popup-info-btn" id="goToPopupCityBtn">Random-City 🛩️</button>
+            <button class="popup-info-btn" id="goToPopupQuizBtn">Quiz App 🎌</button>
+          </div>
+        </div>
       </div>
 
       <div class="column col-right reveal">
@@ -172,16 +181,13 @@
       </a>
     </div>
   </div>
-
-  <!-- <button id="goToPopupCityBtn">Go to Popup City</button> -->
-
-  <div class="colored-spacer-city popup-box" id="popupCity" style="display:none;">
+  <!-- RANDOM CITY POPUP -->
+  <div class="popup-box" id="popupCity" style="display:none;">
     <span class="close-btn" id="closeBtn">&times;</span>
     <p class="game-text" data-i18n="citytext1">Explore a random city from my project! Take a quick tour, test, or just
       check it
       out.</p>
     <div class="arrow-text-wrapper" style="display:none;">
-
       <img id="arrowBtn" src="/images/down-arrow.svg" alt="arrow down" style="cursor: pointer;" />
     </div>
     <div id="dropdownContainer" style="display:block;">
@@ -201,8 +207,9 @@
       </a>
     </div>
   </div>
-  <div id="popupBg" style="display:none;"></div>
 
+  <!-- POPUP BACKGROUND -->
+  <div id="popupBg" style="display:none;"></div>
 
 
   <!-- SKILLS -->
@@ -315,10 +322,36 @@
       <span class="made-text">Made by Jacob</span>
     </div>
   </div>
-
-
-
-
+  <!-- RANDOM SONG POPUP -->
+  <div class="popup-box" id="popupSong" style="display:none;">
+    <span class="close-btn" id="closeBtnSong">&times;</span>
+    <p class="game-text-popup" data-i18n="songtext1">Discover a random song from my project! Listen and enjoy the tunes.
+    </p>
+    <div id="dropdownContainerSong-popup">
+      <p data-i18n="songtext2">Choose a genre and click the button to uncover a random song! Dive into the world of
+        music and explore new sounds and artists.</p>
+      <div class="custom-select-popup">
+        <select id="genre-select-popup">
+          <option value="" data-i18n="genreText">Select a genre</option>
+        </select>
+        <span class="select-icon-popup"></span>
+      </div>
+      <button id="get-random-song-popup" data-i18n="randomSongText" disabled>Get a random song</button>
+      <div class="playerContainer-popup">
+        <div class="player-info-popup">
+          <div id="loading-container-popup" class="circle-loading"></div>
+          <audio id="player-popup" controls style="display:none;"></audio>
+          <div class="player-controls-popup" style="display:none;"></div>
+          <div id="song-info-popup"></div>
+        </div>
+        <div class="try-find-spotify-popup">
+          <button id="try-again-song-popup" data-i18n="tryAgainBtn" style="display:none;">Try Again</button>
+          <button id="find-spotify-song-popup" data-i18n="findSpotify" style="display:none;">Find on Spotify</button>
+        </div>
+      </div>
+      <span class="made-text-popup">Made by Jacob</span>
+    </div>
+  </div>
 
 
   <!-- WORK -->
@@ -417,29 +450,23 @@
       <div id="quizContainer" style="display:none;"></div>
     </div>
   </div>
-
-
-
-  <div class="colored-spacer-quiz popup-box" id="popupQuiz" style="display:none;">
-    <span class="close-btn" id="closeBtn">&times;</span>
-    <p class="game-text" data-i18n="quiztext1">Test your knowledge with this quiz about countries' flags and capitals.
+  <!-- POPUP QUIZ -->
+  <div class=" popup-box" id="popupQuiz" style="display:none;">
+    <span class="close-btn" id="closeBtnQuiz">&times;</span>
+    <p class="popup-text" data-i18n="quiztext1">Test your knowledge with this quiz about countries' flags and capitals.
       Choose a category and start the quiz!</p>
-    <div class="arrow-text-wrapper" style="display:none;">
-      <span class="click-here-text" data-i18n="clickHere">Click Here ➜</span>
-      <img id="quizArrowBtn" src="/images/down-arrow.svg" alt="arrow down" style="cursor: pointer;" />
-    </div>
-    <div id="quizDropdownContainer" style="display:block;">
-      <label for="quizCategory" id="categoryLabel" data-i18n="quiztext2">Choose a category:</label>
-      <div class="custom-select">
-        <select id="quizCategory">
+    <div id="quizDropdownContainer-popup" style="display:block;">
+      <label for="quizCategory" id="categoryLabel-popup" data-i18n="quiztext2">Choose a category:</label>
+      <div class="custom-select-popup">
+        <select id="quizCategory-popup">
           <option value="flags" data-i18n="flags">Flags</option>
           <option value="capitals" data-i18n="capitals">Capitals</option>
         </select>
-        <span class="select-icon"></span>
+        <span class="select-icon-popup"></span>
       </div>
       <br>
-      <button id="startQuizBtn" data-i18n="startQuizBtn">Start Quiz</button>
-      <div id="quizContainer" style="display:none;"></div>
+      <button id="startQuizBtn-popup" data-i18n="startQuizBtn">Start Quiz</button>
+      <div id="quizContainer-popup" style="display:none;"></div>
     </div>
   </div>
 
@@ -495,17 +522,42 @@
   </section>
 
 
+  <!-- VISITORS -->
+  <!-- <div class="visitor-container">
+    <div class="content-wrapper-visitor">
+      <div class="total-visitor-heading" onclick="toggleCountryList()">
+        <span>Total visitors: </span>
+        <span id="visitor-total-wrapper"><span id="visitor-total">0</span></span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="chevron-icon" width="16" height="16">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+        </svg>
+      </div>
+      <div class="visitor-country-list" id="country-list">
+        <ol id="top-countries"></ol>
+      </div>
+    </div>
+  </div> -->
+
+
+
+
+
   <!-- FOOTER -->
   <footer class="footer">
     <h1 class="footer-title">Jacob Kourieh</h1>
+    <span>2023</span>
   </footer>
 
   <!-- SCRIPTS -->
   <script type="module" src="main.js"></script>
   <script src="darkmode.js"></script>
   <script src="randomcity.js"></script>
-  <script src="randomsong.js"></script>
-  <script type="module" src="quiz.js"></script>
+  <script src="random-song/randomsong.js"></script>
+  <script src="random-song/popupsong.js"></script>
+  <script type="module" src="quiz/quiz.js"></script>
+  <script type="module" src="quiz/quizpopup.js"></script>
+  <script src="visitor.js"></script>
 
 </body>
 
