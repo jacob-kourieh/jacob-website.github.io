@@ -91,7 +91,7 @@ async function fetchIpAddress() {
 }
 
 async function fetchLocationByIp(ipAddress) {
-    const response = await fetch(`https://ipapi.co/${ipAddress}/json/`);
+    const response = await fetch(``);
     const data = await response.json();
     return {
         latitude: data.latitude,

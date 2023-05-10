@@ -1579,6 +1579,11 @@ input[type="radio"]:checked.wrong+label img.flag {
   font-size: 13px;
 }
 
+#quizContainer-popup ul {
+  grid-gap: 13px;
+    margin-top: 27px;
+}
+
 }
 
 @media (max-width: 1040px) {
