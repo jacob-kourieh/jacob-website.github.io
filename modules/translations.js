@@ -61,6 +61,7 @@ const translations = {
     submit: "Submit",
     finishQuiz: "Finish Quiz",
     timeElapsed: "Time elapsed",
+    visitor: "Total visitors:",
   },
 
   sv: {
@@ -125,6 +126,7 @@ const translations = {
     submit: "Skicka",
     finishQuiz: "Avsluta quiz",
     timeElapsed: "Tid förfluten",
+    visitor: "Totalt besökare:",
 
   },
   es: {
@@ -189,6 +191,7 @@ const translations = {
     submit: "Enviar",
     finishQuiz: "Terminar cuestionario",
     timeElapsed: "Tiempo transcurrido",
+    visitor: "Visitantes totales:",
   },
 };
 

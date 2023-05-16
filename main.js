@@ -141,4 +141,52 @@ function updateQueryString(key, value) {
 updateQueryString("lang", "en");
 
 
-//The website created by © Jacob Kourieh.
+
+// Get the country code from the IP address, then get the language from the country code
+fetch('https://ipinfo.io?token=07ad1c0c978b42')
+  .then(response => response.json())
+  .then(data => {
+    const country = data.country;
+    fetchLanguage(country);
+  })
+  .catch(error => {
+    console.log('Error:', error);
+    setLanguage('en');
+  });
+
+// Get the language from the country code
+function fetchLanguage(countryCode) {
+  fetch(`https://restcountries.com/v3.1/alpha/${countryCode}`)
+    .then(response => response.json())
+    .then(data => {
+      const languages = Object.values(data[0].languages);
+      setLanguageBasedOnCountryLanguages(languages);
+    })
+    .catch(error => {
+      console.log('Error:', error);
+      setLanguage('en');
+    });
+}
+
+// Set the language based on the country languages
+function setLanguageBasedOnCountryLanguages(languages) {
+  let languageToUse = 'en';
+
+
+  if (languages.includes('Spanish')) {
+    languageToUse = 'es';
+  } else if (languages.includes('Swedish')) {
+    languageToUse = 'sv';
+  }
+
+  setLanguage(languageToUse);
+  languageSelector.value = languageToUse;
+  localStorage.setItem("lang", languageToUse);
+  updateQueryString("lang", languageToUse);
+}
+
+
+
+
+//The website created by © Jacob Kourieh. All rights reserved.
+
