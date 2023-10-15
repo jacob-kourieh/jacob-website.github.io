@@ -335,4 +335,5 @@ function checkForShowQuizParameter() {
 checkForShowQuizParameter();
 
 //Made by Jacob Kourieh
+//https://jacob-kourieh.com/?showquiz=true
 

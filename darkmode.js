@@ -46,7 +46,7 @@ async function setDarkModeBySunriseSunset(latitude, longitude) {
 
 function applyInitialDarkMode() {
     const hours = new Date().getHours();
-    const isNightTime = hours < 6 || hours >= 21;
+    const isNightTime = hours < 6 || hours >= 17;
 
     if (isNightTime) {
         requestAnimationFrame(() => {
