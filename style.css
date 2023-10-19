@@ -665,6 +665,63 @@ select {
   gap: 25px;
 }
 
+/* ---------- services ---------- */
+.services .content{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.title p{
+  font-size: 1em;
+  width: 80%;
+}
+
+
+.services .content .card{
+  background: #fff;
+  width: 340px;
+  margin: 10px;
+  padding: 25px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+  border-radius: 10px;
+}
+
+.services .content .card .service-icon{
+  color: #3a6cf4;
+  font-size: 8em;
+  text-align: center;
+  transition: transform 0.5s ease;
+}
+
+.services .content .card:hover .service-icon{
+  transform: translateY(-10px);
+}
+
+.services .content .card .info{
+  text-align: center;
+}
+
+.services .content .card .info h3{
+  color: #3a6cf4;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 10px;
+}
+
+.experience-img {
+  width: 100%
+}
+
+.experience-img-1 {
+  width: 180px;
+}
+
 
 /* ---------- CONTACT ---------- */
 .contact .content {
@@ -954,14 +1011,17 @@ body.darkmode select {
 
 body.darkmode header,
 body.darkmode .contact .content .row .card,
-body.darkmode .contact-form {
+body.darkmode .contact-form,
+body.darkmode .services .content .card {
   background: #000016;
 
 }
 
 body.darkmode .contact .content .row .card .info h3,
 body.darkmode .contact-form h3,
-body.darkmode header .navigation a {
+body.darkmode header .navigation a,
+body.darkmode .card .info p
+{
   color: white;
 }
 

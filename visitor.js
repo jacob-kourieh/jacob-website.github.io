@@ -66,9 +66,12 @@ async function updateVisitorCount() {
     const visitorCounts = await fetchVisitorCounts();
     const allCountries = await fetchAllCountries();
 
-    visitorTotal.textContent = visitorCounts.total;
+    if (visitorTotal.textContent === "....") {
+        visitorTotal.textContent = visitorCounts.total;
+    }
     displayTopCountries(visitorCounts, allCountries);
 }
+
 
 function displayTopCountries(visitorCounts, allCountries) {
     const topCountriesList = document.getElementById("top-countries");
@@ -123,7 +126,7 @@ let hasAnimated = false;
 const observer = new IntersectionObserver(
     (entries) => {
         entries.forEach((entry) => {
-            if (entry.isIntersecting && !hasAnimated) {
+            if (entry.isIntersecting && !hasAnimated && visitorTotal.textContent !== "....") {
                 animateCounting(visitorTotal, parseInt(visitorTotal.textContent));
                 hasAnimated = true;
             }
@@ -131,6 +134,7 @@ const observer = new IntersectionObserver(
     },
     { threshold: 0.5 }
 );
+
 
 
 observer.observe(visitorTotalWrapper);
