@@ -47,7 +47,7 @@
       <a href="#about" data-i18n="about">About</a>
       <a href="#skills" data-i18n="skills">Skills</a>
       <a href="#work" data-i18n="work">Work</a>
-      <a href="#services" data-i18n="services">Experience</a>
+      <a href="#services" data-i18n="services">Experiences</a>
       <a href="#contact" data-i18n="contact">Contact</a>
 
       <!-- Toggle navigation menu for mobile view -->
@@ -220,17 +220,21 @@
     </div>
     <div class="content">
       <div class="column col-left reveal">
-        <h2 class="content-title" data-i18n="mySkillsTittle">My Skills and Experiences</h2>
+        <h2 class="content-title" data-i18n="mySkillsTittle">My Skills</h2>
         <p data-i18n="mySkillsText1">In my role as a Frontend Developer, my expertise includes:</p>
         <p data-i18n="mySkillsText2">HTML, CSS, JavaScript, React, Redux, APIs, UX and Usability, Figma, Github, Dynamic
           web development, TypeScript, Node.js, MongoDB, and Agile methods (Scrum).</p>
         <br>
-        <p data-i18n="mySkillsText3"> In addition to these core skills, I have experience working with
-          <a href="https://mantine.dev" target="_blank" rel="noopener noreferrer">Mantine</a> and
+        <p data-i18n="mySkillsText3">
+          In addition to these core skills, I have experience working with
+          <a href="https://mui.com/" target="_blank" rel="noopener noreferrer">Material-UI</a>,
+          <a href="https://mantine.dev" target="_blank" rel="noopener noreferrer">Mantine</a>, and
           <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer">Tailwind CSS</a>.
-          Mantine is a modern React component library that provides a comprehensive set of components for
-          building high-quality, responsive user interfaces. Tailwind CSS is a highly customizable, utility-first CSS
-          framework for rapidly building custom designs and ensuring a consistent look and feel across a project.
+          MUI(Material-UI) is a popular React UI framework featuring a comprehensive set of material-design components
+          for building rich user interfaces. Mantine is a modern React component library that provides a comprehensive
+          set of components for building high-quality, responsive user interfaces. Tailwind CSS is a highly
+          customizable, utility-first CSS framework for rapidly building custom designs and ensuring a consistent
+          look and feel across a project.
         </p>
         <br>
         <p data-i18n="mySkillsText4">I utilize my skills to create interactive and accessible websites while driving the
@@ -380,12 +384,27 @@
         <a class="card reveal" href="https://artists-war-app.onrender.com/" target="_blank">
           <div class="card-img">
             <img alt="Music Artist War App" src="images/work1.png"
-              title="Music Artist War App, /FULL STACK APP/ built with React,Node.js,Express,MongoDB" />
+              title="Music Artist War App, /FULL STACK APP/ built with React-TypeScript,TanStack Query,Material UI,Node.js,Express,MongoDB" />
           </div>
         </a>
         <div class="card-buttons">
           <a class="btn reveal btn-work" href="https://artists-war-app.onrender.com/" target="_blank">Live Demo</a>
-          <a class="btn reveal btn-work" href="https://github.com/jacob-kourieh/Music-Artists-War-FULLSTACK"
+          <a class="btn reveal btn-work" href="https://github.com/jacob-kourieh/Music-War-App"
+            target="_blank">Github</a>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <a class="card reveal" href="https://github.com/jacob-kourieh/My-Klarna-Payments" target="_blank">
+          <div class="card-img">
+            <img alt="Klarna Payments Integration" src="images/work11.png"
+              title="Klarna Payments, /HTML/CSS/JavaScript-jQuery-Express.js-nodeJS" />
+          </div>
+        </a>
+        <div class="card-buttons">
+          <a class="btn reveal btn-work" href="https://github.com/jacob-kourieh/My-Klarna-Payments" target="_blank">Live
+            Demo</a>
+          <a class="btn reveal btn-work" href="https://github.com/jacob-kourieh/My-Klarna-Payments"
             target="_blank">Github</a>
         </div>
       </div>
@@ -665,7 +684,7 @@
     <div class="content-wrapper-visitor">
       <div class="total-visitor-heading" onclick="toggleCountryList()">
         <span data-i18n="visitor">Total visitors:</span>
-        <span id="visitor-total-wrapper"><span id="visitor-total">....</span></span>
+        <span id="visitor-total-wrapper"><span id="visitor-total">Loading...</span></span>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
           class="chevron-icon" width="16" height="16">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
@@ -676,9 +695,6 @@
       </div>
     </div>
   </div>
-
-
-
 
 
   <!-- FOOTER -->

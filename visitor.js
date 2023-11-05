@@ -66,7 +66,7 @@ async function updateVisitorCount() {
     const visitorCounts = await fetchVisitorCounts();
     const allCountries = await fetchAllCountries();
 
-    if (visitorTotal.textContent === "....") {
+    if (visitorTotal.textContent === "Loading...") {
         visitorTotal.textContent = visitorCounts.total;
     }
     displayTopCountries(visitorCounts, allCountries);
@@ -126,7 +126,7 @@ let hasAnimated = false;
 const observer = new IntersectionObserver(
     (entries) => {
         entries.forEach((entry) => {
-            if (entry.isIntersecting && !hasAnimated && visitorTotal.textContent !== "....") {
+            if (entry.isIntersecting && !hasAnimated && visitorTotal.textContent !== "Loading...") {
                 animateCounting(visitorTotal, parseInt(visitorTotal.textContent));
                 hasAnimated = true;
             }
