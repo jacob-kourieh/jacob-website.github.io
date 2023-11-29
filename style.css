@@ -597,7 +597,7 @@ select {
 }
 
 .skills .content .col-right .bar .typescript:before {
-  width: 65%;
+  width: 80%;
   background: #0022d1bd;
   border-radius: 20px;
 }
