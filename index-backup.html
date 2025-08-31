@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Welcome to my portfolio! I'm Jacob Kourieh, a recently graduated Frontend Developer based in Gothenburg, Sweden. 
+    I'm excited to create innovative and engaging web solutions for diverse clients and projects.">
+  <meta name="keywords"
+    content="Jacob, Kourieh, Portfolio, Frontend, developer, webdeveloper, Gothenburg, work, jobb, front-end, javascript, html, css, Designer, ux, ui,
+  Usability, Node.js, react, Scrum, github, figma, typescript, Göteborg, arbetar, utvecklare, webutvecklare, javascriptutvecklare ">
+
+  <meta property="og:title" content="Jacob Kourieh - Frontend Developer Portfolio">
+  <meta property="og:description" content="Welcome to my portfolio! I'm Jacob Kourieh, a recently graduated Frontend Developer based in Gothenburg, Sweden. 
+    I'm excited to create innovative and engaging web solutions for diverse clients and projects.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jacob-kourieh.com/">
+  <meta property="og:image" content="https://i.ibb.co/q0jBsDV/Bg.jpg" />
+
+  <title>Jacob Kourieh-Frontend Developer Portfolio</title>
+  <link rel="icon" href="./images/logo.svg" />
+  <link rel="apple-touch-icon" href="https://i.ibb.co/gg1ZM7b/Profile-Image-1.jpg" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    emailjs.init('CqsjiW6hHD_LdRD5P')
+  </script>
+
+</head>
+
+
+<body class="hide-content">
+  <!-- PRELOADER -->
+  <div class="scrollToTop-btn">
+    <i class="fas fa-angle-up"></i>
+  </div>
+
+  <header>
+    <!-- NAVIGATION -->
+    <a href="#" class="brand">Jacob</a>
+    <div class="menu-btn"></div>
+    <div class="navigation">
+      <a href="#main" lang="en" data-i18n="home">Home</a>
+      <a href="#about" data-i18n="about">About</a>
+      <a href="#skills" data-i18n="skills">Skills</a>
+      <a href="#work" data-i18n="work">Work</a>
+      <a href="#services" data-i18n="services">Experiences</a>
+      <a href="#contact" data-i18n="contact">Contact</a>
+
+      <!-- Toggle navigation menu for mobile view -->
+      <div class="theme-switch-wrapper mobile-toggle">
+        <label class="theme-switch" for="darkmode-toggle-mobile">
+          <input type="checkbox" id="darkmode-toggle-mobile" class="darkmode-toggle" />
+          <div class="slider round">
+            <i class="fas fa-sun sun-icon"></i>
+            <i class="fas fa-moon moon-icon"></i>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <!-- Toggle DARK MODE -->
+    <div class="theme-switch-wrapper desktop-toggle">
+      <label class="theme-switch" for="darkmode-toggle">
+        <input type="checkbox" id="darkmode-toggle" class="darkmode-toggle" />
+        <div class="slider round">
+          <i class="fas fa-sun sun-icon"></i>
+          <i class="fas fa-moon moon-icon"></i>
+        </div>
+      </label>
+    </div>
+
+
+    <!-- LANGUAGE TOGGLE -->
+    <div class="select p-1 mt-2 langChange">
+      <select name="format" id="format">
+        <option value="en" selected>En</option>
+        <option value="sv">Sv</option>
+        <option value="es">Es</option>
+      </select>
+    </div>
+  </header>
+
+
+  <!-- MAIN -->
+  <section class="main" id="main">
+    <div class="content">
+      <h2> <span class="presentaion" data-i18n="presentaion">Hello, I'm</span> <br>
+        <span class="presentaionName">Jacob Kourieh</span>
+      </h2>
+      <div class="animated-text">
+        <h3>Frontend Developer</h3>
+        <h3>Web Designer</h3>
+        <h3>Web Development</h3>
+      </div>
+      <a href="#work" class="btn btn-work" data-i18n="firstBtn">See My Work</a>
+      <div class="media-icons">
+        <a href="https://www.instagram.com/jacob.kourieh/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/jacob-kourieh/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/jacob-kourieh" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="title reveal">
+      <h2 class="section-title" data-i18n="aboutMe">About Me</h2>
+    </div>
+    <div class="content">
+      <div class="column col-left reveal">
+        <div class="img-card">
+          <img src="images/img-card.jpg" alt="image card Jacob">
+        </div>
+        <div class="popup-info-container">
+          <p data-i18n="miniProjectsInfo">Explore my mini projects and find something that interests you. Thanks for
+            visiting!</p>
+          <div class="popup-info-btns">
+            <button class="popup-info-btn" id="goToPopupSongBtn">Random-Song 🎧</button>
+            <button class="popup-info-btn" id="goToPopupCityBtn">Random-City 🛩️</button>
+            <button class="popup-info-btn" id="goToPopupQuizBtn">Quiz App 🎌</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="column col-right reveal">
+        <h2 class="content-title" data-i18n="aboutMeTitle">Hey There! I'm Jacob Kourieh</h2>
+        <p class="paragraph-text" data-i18n="paragraphtext1">As a Frontend Developer, I am excited to
+          create innovative and engaging web solutions for diverse clients and projects.</p>
+        <p class="paragraph-text" data-i18n="paragraphtext2">I am a structured, ambitious, flexible, and social
+          individual, with a positive attitude. I thrive in collaborative environments, adapting to new challenges and
+          embracing opportunities to expand my skillset.</p>
+        <br>
+        <p class="paragraph-text" data-i18n="paragraphtext3">With creativity, problem-solving, and continuous learning
+          at the core of my work ethic, web development offers me the ideal platform to grow and refine my abilities,
+          always pushing me to evolve and stay ahead of the curve.</p>
+        <br>
+        <p class="paragraph-text" data-i18n="paragraphtext4">Outside of coding, I enjoy maintaining a balanced
+          lifestyle, which includes going to the gym, traveling, spending quality time with family, and experimenting
+          with new recipes in the kitchen.</p>
+        <br>
+        <p class="paragraph-text" data-i18n="paragraphtext5">I am genuinely excited about the prospect of building
+          exceptional applications and designing visually appealing websites.</p>
+        <p class="paragraph-text" data-i18n="paragraphtext6">As I embark on my career in this dynamic industry, I
+          eagerly anticipate making a meaningful impact and becoming an integral part of the field.</p>
+        <br>
+        <p class="paragraph-text" data-i18n="paragraphtext7">Feel free to explore my website further and reach out if
+          you'd like to connect. I'm always open to new opportunities and collaborations!</p>
+        <a href="#contactMe" class="btn" data-i18n="secondBtn">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CITY RANDOM -->
+  <div class="colored-spacer-city" id="city">
+    <p class="game-text" data-i18n="citytext1">Explore a random city from my project! Take a quick tour, test, or just
+      check it
+      out.</p>
+    <div class="arrow-text-wrapper">
+      <span class="click-here-text" data-i18n="clickHere">Click Here ➜</span>
+      <img id="arrowBtn" src="/images/down-arrow.svg" alt="arrow down" style="cursor: pointer;" />
+    </div>
+    <div id="dropdownContainer" style="display:none;">
+      <p data-i18n="citytext2">Looking for a holiday destination or a vacation spot, but unsure where to go? Discover a
+        random city by
+        clicking the button below!</p>
+      <button id="randomCityBtn" data-i18n="randomCityBtn">Get a Random City</button>
+      <div id="loading" style="display:none;">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div id="cityInfo" style="display:none;"></div>
+      <button id="tryAgainBtn" data-i18n="tryAgainBtn" style="display:none;">Try Again</button>
+      <a id="googleLink" href="#" target="_blank" style="display:none;">
+        <button data-i18n="findGoogle">Find on Google</button>
+      </a>
+    </div>
+  </div>
+  <!-- RANDOM CITY POPUP -->
+  <div class="popup-box" id="popupCity" style="display:none;">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <p class="game-text" data-i18n="citytext1">Explore a random city from my project! Take a quick tour, test, or just
+      check it
+      out.</p>
+    <div class="arrow-text-wrapper" style="display:none;">
+      <img id="arrowBtn" src="/images/down-arrow.svg" alt="arrow down" style="cursor: pointer;" />
+    </div>
+    <div id="dropdownContainer" style="display:block;">
+      <p data-i18n="citytext2">Looking for a holiday destination or a vacation spot, but unsure where to go? Discover a
+        random city by
+        clicking the button below!</p>
+      <button id="randomCityBtn" data-i18n="randomCityBtn">Get a Random City</button>
+      <div id="loading" style="display:none;">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div id="cityInfo" style="display:none;"></div>
+      <button id="tryAgainBtn" data-i18n="tryAgainBtn" style="display:none;">Try Again</button>
+      <a id="googleLink" href="#" target="_blank" style="display:none;">
+        <button data-i18n="findGoogle">Find on Google</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- POPUP BACKGROUND -->
+  <div id="popupBg" style="display:none;"></div>
+
+
+  <!-- SKILLS -->
+  <section class="skills" id="skills">
+    <div class="title reveal">
+      <h2 class="section-title" data-i18n="mySkills">My Skills</h2>
+    </div>
+    <div class="content">
+      <div class="column col-left reveal">
+        <h2 class="content-title" data-i18n="mySkillsTittle">My Skills</h2>
+        <p data-i18n="mySkillsText1">In my role as a Frontend Developer, my expertise includes:</p>
+        <p data-i18n="mySkillsText2">HTML, CSS, JavaScript, React, Angular, Angular Material, Redux, APIs, UX and
+          Usability, Figma, Github, Dynamic
+          web development, TypeScript, Node.js, MongoDB, Docker and Agile methods (Scrum).</p>
+        <br>
+        <p data-i18n="mySkillsText3">
+          In addition to these core skills, I have experience working with
+          <a href="https://mui.com/" target="_blank" rel="noopener noreferrer">Material-UI</a>,
+          <a href="https://mantine.dev" target="_blank" rel="noopener noreferrer">Mantine</a>, and
+          <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer">Tailwind CSS</a>.
+          MUI(Material-UI) is a popular React UI framework featuring a comprehensive set of material-design components
+          for building rich user interfaces. Mantine is a modern React component library that provides a comprehensive
+          set of components for building high-quality, responsive user interfaces. Tailwind CSS is a highly
+          customizable, utility-first CSS framework for rapidly building custom designs and ensuring a consistent
+          look and feel across a project.
+        </p>
+        <br>
+        <p data-i18n="mySkillsText4">I utilize my skills to create interactive and accessible websites while driving the
+          development of larger projects. Whether working independently or collaborating within a team, my focus is on
+          creating dynamic and engaging web experiences for users.</p>
+      </div>
+      <div class="column col-right reveal">
+        <div class="bar">
+          <div class="info">
+            <span>HTML - CSS</span>
+            <span>95%</span>
+          </div>
+          <div class="line html"></div>
+        </div>
+
+        <div class="bar">
+          <div class="info">
+            <span>JavaScript</span>
+            <span>80%</span>
+          </div>
+          <div class="line javascript"></div>
+        </div>
+
+        <div class="bar">
+          <div class="info">
+            <span>React</span>
+            <span>80%</span>
+          </div>
+          <div class="line react"></div>
+        </div>
+
+        <div class="bar">
+          <div class="info">
+            <span>TypeScript</span>
+            <span>80%</span>
+          </div>
+          <div class="line typescript"></div>
+        </div>
+
+        <div class="bar">
+          <div class="info">
+            <span>Node.js</span>
+            <span>70%</span>
+          </div>
+          <div class="line node"></div>
+        </div>
+
+        <div class="bar">
+          <div class="info">
+            <span>UX/UI</span>
+            <span>80%</span>
+          </div>
+          <div class="line ux-ui"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- RANDOM SONG -->
+  <div class="colored-spacer-song">
+    <p class="game-text" data-i18n="songtext1">Discover a random song from my project! Listen and enjoy the tunes.</p>
+    <div class="arrow-text-wrapper">
+      <span class="click-here-text" data-i18n="clickHere">Click Here ➜</span>
+      <img id="arrowBtnSong" src="/images/down-arrow.svg" alt="arrow down" style="cursor: pointer;" />
+    </div>
+    <div id="dropdownContainerSong" style="display:none;">
+      <p data-i18n="songtext2">Choose a genre and click the button to uncover a random song! Dive into the world of
+        music and explore new sounds and artists.</p>
+      <div class="custom-select">
+        <select id="genre-select">
+          <option value="" data-i18n="genreText">Select a genre</option>
+        </select>
+        <span class="select-icon"></span>
+      </div>
+      <button id="get-random-song" data-i18n="randomSongText" disabled>Get a random song</button>
+      <div class="playerContainer">
+        <div class="player-info">
+          <div id="loading-animation" class="circle-loading"></div>
+          <audio id="player" controls style="display:none;"></audio>
+          <div class="player-controls" style="display:none;"></div>
+          <div id="song-info"></div>
+        </div>
+        <div class="try-find-spotify">
+          <button id="try-again-song" data-i18n="tryAgainBtn" style="display:none;">Try Again</button>
+          <button id="find-spotify-song" data-i18n="findSpotify" style="display:none;">Find on Spotify</button>
+        </div>
+      </div>
+      <span class="made-text">Made by Jacob</span>
+    </div>
+  </div>
+  <!-- RANDOM SONG POPUP -->
+  <div class="popup-box" id="popupSong" style="display:none;">
+    <span class="close-btn" id="closeBtnSong">&times;</span>
+    <p class="game-text-popup" data-i18n="songtext1">Discover a random song from my project! Listen and enjoy the tunes.
+    </p>
+    <div id="dropdownContainerSong-popup">
+      <p data-i18n="songtext2">Choose a genre and click the button to uncover a random song! Dive into the world of
+        music and explore new sounds and artists.</p>
+      <div class="custom-select-popup">
+        <select id="genre-select-popup">
+          <option value="" data-i18n="genreText">Select a genre</option>
+        </select>
+        <span class="select-icon-popup"></span>
+      </div>
+      <button id="get-random-song-popup" data-i18n="randomSongText" disabled>Get a random song</button>
+      <div class="playerContainer-popup">
+        <div class="player-info-popup">
+          <div id="loading-container-popup" class="circle-loading"></div>
+          <audio id="player-popup" controls style="display:none;"></audio>
+          <div class="player-controls-popup" style="display:none;"></div>
+          <div id="song-info-popup"></div>
+        </div>
+        <div class="try-find-spotify-popup">
+          <button id="try-again-song-popup" data-i18n="tryAgainBtn" style="display:none;">Try Again</button>
+          <button id="find-spotify-song-popup" data-i18n="findSpotify" style="display:none;">Find on Spotify</button>
+        </div>
+      </div>
+      <span class="made-text-popup">Made by Jacob</span>
+    </div>
+  </div>
+
+
+  <!-- WORK -->
+  <section class="work" id="work">
+    <div class="title reveal">
+      <h2 class="section-title" data-i18n="mywork">My Work</h2>
+    </div>
+    <div class="content">
+
+      <div class="card-container">
+        <a class="card reveal" href="https://autobahn-app.vercel.app/" target="_blank">
+          <div class="card-img">
+            <img alt="Autobahn App" src="images/work12.png" title="Autobahn App, /Angular, Angular Material, Docker/" />
+          </div>
+        </a>
+        <div class="card-buttons">
+          <a class="btn reveal btn-work" href="https://autobahn-app.vercel.app/" target="_blank">Live Demo</a>
+          <a class="btn reveal btn-work" href="https://github.com/jacob-kourieh/Jacob-Autobahn-App"
+            target="_blank">Github</a>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <a class="card reveal" href="https://jacob-kourieh.com/?showquiz=true" target="_blank">
+          <div class="card-img">
+            <img alt="Quiz App" src="images/work10.png" title="My portfolio, /JavaScript, Css, HTML/" />
+          </div>
+        </a>
+        <div class="card-buttons">
+          <a class="btn reveal btn-work" href="https://jacob-kourieh.com/?showquiz=true" target="_blank">Live Demo</a>
+          <a class="btn reveal btn-work"
+            href="https://github.com/jacob-kourieh/jacob-website.github.io/blob/master/quiz/quizpopup.js"
+            target="_blank">Github</a>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <a class="card reveal" href="https://artists-war-app.onrender.com/" target="_blank">
+          <div class="card-img">
+            <img alt="Music Artist War App" src="images/work1.png"
+              title="Music Artist War App, /FULL STACK APP/ built with React-TypeScript,TanStack Query,Material UI,Node.js,Express,MongoDB" />
+          </div>
+        </a>
+        <div class="card-buttons">
+          <a class="btn reveal btn-work" href="https://artists-war-app.onrender.com/" target="_blank">Live Demo</a>
+          <a class="btn reveal btn-work" href="https://github.com/jacob-kourieh/Music-War-App"
+            target="_blank">Github</a>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <a class="card reveal" href="https://github.com/jacob-kourieh/My-Klarna-Payments" target="_blank">
+          <div class="card-img">
+            <img alt="Klarna Payments Integration" src="images/work11.png"
+              title="Klarna Payments, /HTML/CSS/JavaScript-jQuery-Express.js-nodeJS" />
+          </div>
+        </a>
+        <div class="card-buttons">
+          <a class="btn reveal btn-work" href="https://github.com/jacob-kourieh/My-Klarna-Payments" target="_blank">Live
+            Demo</a>
+          <a class="btn reveal btn-work" href="https://github.com/jacob-kourieh/My-Klarna-Payments"
+            target="_blank">Github</a>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <a class="card reveal" href="https://frontend-city-app.vercel.app/" target="_blank">
+          <div class="card-img">
+            <img src="images/work2.png" title="City App, built with React,Redux,Express&Node.js" alt="City App">
+          </div>
+        </a>
+        <div class="card-buttons">
+          <a class="btn reveal btn-work" href="https://frontend-city-app.vercel.app/" target="_blank">Live Demo</a>
+          <a class="btn reveal btn-work" href="https://github.com/jacob-kourieh/City_APP_Jacob_K"
+            target="_blank">Github</a>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <a class="card reveal" href="https://weddingphoto.vercel.app/" target="_blank">
+          <div class="card-img">
+            <img src="images/work3.png" title="BRÖLLOPSFOTOGRAFEN,fullstack App with React.js,node.js"
+              alt="BRÖLLOPSFOTOGRAFEN">
+          </div>
+        </a>
+        <div class="card-buttons">
+          <a class="btn reveal btn-work" href="https://weddingphoto.vercel.app/" target="_blank">Live Demo</a>
+          <a class="btn reveal btn-work" href="https://github.com/jacob-kourieh/Brollopsfotografen_Frontend"
+            target="_blank">Github</a>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <a class="card reveal" href="https://hangman-delta.vercel.app/" target="_blank">
+          <div class="card-img">
+            <img src="images/work4.png" title="Hungman:Minecraft Mobs, built with HTML,CSS&JS"
+              alt="Hungman Minecraft Mobs">
+          </div>
+        </a>
+        <div class="card-buttons">
+          <a class="btn reveal btn-work" href="https://hangman-delta.vercel.app/" target="_blank">Live Demo</a>
+          <a class="btn reveal btn-work" href="https://github.com/jacob-kourieh/Hangman" target="_blank">Github</a>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <a class="card reveal" href="https://solarsystem-two.vercel.app/" target="_blank">
+          <div class="card-img">
+            <img src="images/work5.png" title="Solar System, built with HTML,CSS&vanilla JS" alt="Solar System">
+          </div>
+        </a>
+        <div class="card-buttons">
+          <a class="btn reveal btn-work" href="https://solarsystem-two.vercel.app/" target="_blank">Live Demo</a>
+          <a class="btn reveal btn-work" href="https://github.com/jacob-kourieh/Solarsystem" target="_blank">Github</a>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <a class="card reveal" href="https://where-its-at-2v.vercel.app/" target="_blank">
+          <div class="card-img">
+            <img src="images/work6.png" title="Where Its @ App, built with React,API,Router,useEffect&useContext"
+              alt="where it's at App">
+          </div>
+        </a>
+        <div class="card-buttons">
+          <a class="btn reveal btn-work" href="https://where-its-at-2v.vercel.app/" target="_blank">Live Demo</a>
+          <a class="btn reveal btn-work" href="https://github.com/jacob-kourieh/where-its-at_Jacob_Britta"
+            target="_blank">Github</a>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <a class="card reveal" href="https://agila-metoder-jacob.vercel.app/" target="_blank">
+          <div class="card-img">
+            <img src="images/work7.png" title="info site:Agile methods(Scrum), Github-Issue-Projects"
+              alt="Agila-metoder">
+          </div>
+        </a>
+        <div class="card-buttons">
+          <a class="btn reveal btn-work" href="https://agila-metoder-jacob.vercel.app/" target="_blank">Live Demo</a>
+          <a class="btn reveal btn-work" href="https://github.com/jacob-kourieh/Agila-Metoder-Jacob-K"
+            target="_blank">Github</a>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <a class="card reveal"
+          href="https://www.figma.com/proto/J6oD9rjZfdLq0bb7CHQ0ZB/Sinus-skateboard-by-JACOB?node-id=3%3A74&scaling=min-zoom&page-id=3%3A73&starting-point-node-id=3%3A74"
+          target="_blank">
+          <div class="card-img">
+            <img src="images/work8.png"
+              title="Sinus Skateboard webshop, UX&UI with Figma(styles-Frames-Grid-Typografi-Components-Variants)"
+              alt="ux/ui project">
+          </div>
+        </a>
+        <div class="card-buttons">
+          <a class="btn reveal btn-work"
+            href="https://www.figma.com/proto/J6oD9rjZfdLq0bb7CHQ0ZB/Sinus-skateboard-by-JACOB?node-id=3%3A74&scaling=min-zoom&page-id=3%3A73&starting-point-node-id=3%3A74"
+            target="_blank">Live Demo</a>
+          <a class="btn reveal btn-work"
+            href="https://www.figma.com/proto/J6oD9rjZfdLq0bb7CHQ0ZB/Sinus-skateboard-by-JACOB?node-id=3%3A74&scaling=min-zoom&page-id=3%3A73&starting-point-node-id=3%3A74"
+            target="_blank">Figma</a>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <a class="card reveal"
+          href="https://www.figma.com/proto/CC32ScVhgMhaEysI6To6nI/Verktygsbiblioteket-Stickan?node-id=22%3A315&scaling=scale-down&page-id=0%3A1&starting-point-node-id=22%3A315"
+          target="_blank">
+          <div class="card-img">
+            <img src="images/work9.png"
+              title="Verktyg bibliotek app, UX&UI with Figma(Color styles-Text styles-Grid styles-Components-Variants) "
+              alt="ux/ui project">
+          </div>
+        </a>
+        <div class="card-buttons">
+          <a class="btn reveal btn-work"
+            href="https://www.figma.com/proto/CC32ScVhgMhaEysI6To6nI/Verktygsbiblioteket-Stickan?node-id=22%3A315&scaling=scale-down&page-id=0%3A1&starting-point-node-id=22%3A315"
+            target="_blank">Live Demo</a>
+          <a class="btn reveal btn-work"
+            href="https://www.figma.com/proto/CC32ScVhgMhaEysI6To6nI/Verktygsbiblioteket-Stickan?node-id=22%3A315&scaling=scale-down&page-id=0%3A1&starting-point-node-id=22%3A315"
+            target="_blank">Figma</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- QUIZ -->
+  <div class="colored-spacer-quiz">
+    <p class="game-text" data-i18n="quiztext1">Test your knowledge with this quiz about countries' flags and capitals.
+      Choose a category and start the quiz!</p>
+    <div class="arrow-text-wrapper">
+      <span class="click-here-text" data-i18n="clickHere">Click Here ➜</span>
+      <img id="quizArrowBtn" src="/images/down-arrow.svg" alt="arrow down" style="cursor: pointer;" />
+    </div>
+    <div id="quizDropdownContainer" style="display:none;">
+      <label for="quizCategory" id="categoryLabel" data-i18n="quiztext2">Choose a category:</label>
+      <div class="custom-select">
+        <select id="quizCategory">
+          <option value="flags" data-i18n="flags">Flags</option>
+          <option value="capitals" data-i18n="capitals">Capitals</option>
+        </select>
+        <span class="select-icon"></span>
+      </div>
+      <br>
+      <button id="startQuizBtn" data-i18n="startQuizBtn">Start Quiz</button>
+      <div id="quizContainer" style="display:none;"></div>
+    </div>
+  </div>
+  <!-- POPUP QUIZ -->
+  <div class=" popup-box" id="popupQuiz" style="display:none;">
+    <span class="close-btn" id="closeBtnQuiz">&times;</span>
+    <p class="popup-text" data-i18n="quiztext1">Test your knowledge with this quiz about countries' flags and capitals.
+      Choose a category and start the quiz!</p>
+    <div id="quizDropdownContainer-popup" style="display:block;">
+      <label for="quizCategory" id="categoryLabel-popup" data-i18n="quiztext2">Choose a category:</label>
+      <div class="custom-select-popup">
+        <select id="quizCategory-popup">
+          <option value="flags" data-i18n="flags">Flags</option>
+          <option value="capitals" data-i18n="capitals">Capitals</option>
+        </select>
+        <span class="select-icon-popup"></span>
+      </div>
+      <br>
+      <button id="startQuizBtn-popup" data-i18n="startQuizBtn">Start Quiz</button>
+      <div id="quizContainer-popup" style="display:none;"></div>
+    </div>
+  </div>
+
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="title reveal">
+      <h2 class="section-title" data-i18n="servicesTitle">My Services</h2>
+      <p data-i18n="servicesHeader">My experiences have taken me through exciting roles in web development, where I have
+        contributed to innovative projects and platforms. Working with companies like Yoin Tech, Swedcon18, and
+        FöreningsVärlden has allowed me to refine my technical skills while focusing on impactful, user-centered
+        solutions.</p>
+    </div>
+    <div class="content">
+      <div class="card reveal">
+        <div class="service-icon">
+          <a href="https://yoin.tech/" target="_blank">
+            <img class="experience-img-1" src="images/experience1.svg" title="My Experience: Yoin Technologies "
+              alt="Yoin Technologies">
+          </a>
+        </div>
+        <div class="info">
+          <h3>Frontend Developer</h3>
+          <p data-i18n="servicesText1">At Yoin Tech, I worked as a Frontend Developer on a platform developed in
+            TypeScript for
+            business
+            networking. The platform allowed users to search and collaborate with business contacts, and through its
+            recommendation feature, they could expand within their network. The system was tailored for social sellers,
+            emphasizing relationships, while also providing tools to update contacts and analyze network activity.</p>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="service-icon">
+          <a href="https://swedcon18.com/" target="_blank">
+            <img class="experience-img" src="images/experience2.png" title="My Experience: Swedcon18 AB"
+              alt="Swedcon18">
+          </a>
+        </div>
+        <div class="info">
+          <h3>Frontend Developer</h3>
+          <p data-i18n="servicesText2">At Swedcon18, I worked as a Frontend Developer and had the privilege to be part
+            of the team
+            that developed
+            a healthcare app, Carelyo Medtech. This app is a telehealth platform revolutionizing how people manage their
+            health. It offers advanced digital services such as electronic medical records and lab services. I also
+            gained experience working with both Next.js and Mantine. </p>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="service-icon">
+          <a href="https://foreningsvarlden.se/" target="_blank">
+            <img class="experience-img-1" src="images/experience3.png" title="My Experience: FöreningsVärlden "
+              alt="FöreningsVärlden">
+          </a>
+        </div>
+        <div class="info">
+          <h3>Frontend Developer</h3>
+          <p data-i18n="servicesText3">At FöreningsVärlden, I design and develop digital tools and platforms tailored to
+            the unique needs of associations. This includes creating solutions that streamline administrative workflows,
+            optimize member management, and enhance internal communication. By delivering intuitive and efficient
+            technology, I help associations focus on their missions, operate effectively, and drive meaningful societal
+            impact.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="title reveal">
+      <h2 class="section-title" data-i18n="contactMe">Contact Me</h2>
+    </div>
+    <div class="content">
+      <div class="row">
+        <a href="https://www.google.com/maps/place/Gothenburg/@57.6863959,11.8889559,11.5z/data=!4m5!3m4!1s0x464f8e67966c073f:0x4019078290e7c40!8m2!3d57.70887!4d11.97456"
+          target="_blank" class="card reveal">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="info">
+            <h3 data-i18n="addressTittle">Address</h3>
+            <span data-i18n="addressInfo">Gothenburg, Sweden</span>
+          </div>
+        </a>
+
+        <a href="mailto: jacob.kourieh@gmail.com" class="card reveal">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="info">
+            <h3 data-i18n="email">Email Address</h3>
+            <span>jacob.kourieh@gmail.com</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="row" id="contactMe">
+        <form class="contact-form reveal" id="form" method="post">
+          <h3 data-i18n="sendMsg">Send Message</h3>
+          <div class="input-box field">
+            <input data-i18n="fromName" type="text" name="from_name" id="from_name" placeholder="Name *" required>
+          </div>
+          <div class="input-box field">
+            <input type="email" name="reply_to" id="reply_to" placeholder="Email *" required>
+          </div>
+          <div class="input-box field">
+            <textarea type="text" name="message" id="message" rows="8" cols="80" placeholder="Message *"
+              required></textarea>
+          </div>
+          <div class="input-box field">
+            <input data-i18n="send" type="submit" class="send-btn" id="button" value="Send">
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- VISITORS -->
+  <div class="visitor-container">
+    <div class="content-wrapper-visitor">
+      <div class="total-visitor-heading" onclick="toggleCountryList()">
+        <span data-i18n="visitor">Total visitors:</span>
+        <span id="visitor-total-wrapper"><span id="visitor-total">Loading...</span></span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="chevron-icon" width="16" height="16">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+        </svg>
+      </div>
+      <div class="visitor-country-list" id="country-list">
+        <ol id="top-countries"></ol>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <h1 class="footer-title">Jacob Kourieh</h1>
+    <span>2023</span>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script type="module" src="main.js"></script>
+  <script src="darkmode.js"></script>
+  <script src="randomcity.js"></script>
+  <script src="random-song/randomsong.js"></script>
+  <script src="random-song/popupsong.js"></script>
+  <script type="module" src="quiz/quiz.js"></script>
+  <script type="module" src="quiz/quizpopup.js"></script>
+  <script src="visitor.js"></script>
+
+</body>
+
+</html>
