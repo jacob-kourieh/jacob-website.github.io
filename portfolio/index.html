@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="sv" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob Kourieh - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#1a1a2e',
+                        header: '#0d0d1a',
+                        terminal: '#0f0f1f',
+                        primary: '#6366f1',
+                        secondary: '#818cf8',
+                        accent: '#e87b35',
+                        text: '#e2e8f0',
+                        muted: '#94a3b8',
+                        green: '#22c55e',
+                        yellow: '#eab308',
+                        cyan: '#06b6d4',
+                    },
+                    fontFamily: {
+                        mono: ['Consolas', 'Monaco', 'Courier New', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #1a1a2e;
+            color: #e2e8f0;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="h-full flex flex-col font-mono overflow-hidden">
+
+    <!-- App Container (Flex Column) -->
+    <div class="flex-1 flex flex-col min-h-0 bg-background">
+
+        <!-- Terminal Header -->
+        <div class="p-3 flex items-center justify-between shrink-0 bg-header">
+            <!-- Title & Button -->
+            <div class="text-sm flex items-center gap-3 text-muted">
+                <span class="text-green">●</span> jacob@portfolio:~
+                <a href="../terminal/"
+                    class="px-3 py-1 rounded text-xs transition-all hover:opacity-80 bg-accent/30 text-accent border border-accent/60 flex items-center gap-2">
+                    <span class="hidden sm:inline">🖥️ Open Terminal</span>
+                    <span class="sm:hidden">🖥️</span>
+                </a>
+            </div>
+
+            <!-- Avatar -->
+            <div class="flex items-center gap-3">
+                <span class="text-sm hidden sm:block text-accent">Jacob Kourieh</span>
+                <img src="../images/portfolio_avatar.webp" alt="Jacob Kourieh"
+                    class="w-12 h-12 object-cover border border-primary">
+            </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="p-2 flex flex-wrap gap-1 md:gap-2 border-b border-muted/20 shrink-0 bg-terminal">
+            <button onclick="renderSection('home')"
+                class="nav-btn px-2 md:px-3 py-1 rounded text-xs md:text-sm transition-all border border-transparent"
+                data-section="home" data-cmd="cat welcome.txt">
+                <span class="text-green">$</span> cat welcome.txt
+            </button>
+            <button onclick="renderSection('profile')"
+                class="nav-btn px-2 md:px-3 py-1 rounded text-xs md:text-sm transition-all border border-transparent"
+                data-section="profile" data-cmd="cat profile.md">
+                <span class="text-green">$</span> cat profile.md
+            </button>
+            <button onclick="renderSection('skills')"
+                class="nav-btn px-2 md:px-3 py-1 rounded text-xs md:text-sm transition-all border border-transparent"
+                data-section="skills" data-cmd="ls -la ./skills/">
+                <span class="text-green">$</span> ls -la ./skills/
+            </button>
+            <button onclick="renderSection('projects')"
+                class="nav-btn px-2 md:px-3 py-1 rounded text-xs md:text-sm transition-all border border-transparent"
+                data-section="projects" data-cmd="git log --oneline projects/">
+                <span class="text-green">$</span> git log --oneline projects/
+            </button>
+            <button onclick="renderSection('education')"
+                class="nav-btn px-2 md:px-3 py-1 rounded text-xs md:text-sm transition-all border border-transparent"
+                data-section="education" data-cmd="cat education.json">
+                <span class="text-green">$</span> cat education.json
+            </button>
+            <button onclick="renderSection('contact')"
+                class="nav-btn px-2 md:px-3 py-1 rounded text-xs md:text-sm transition-all border border-transparent"
+                data-section="contact" data-cmd="cat contact.txt">
+                <span class="text-green">$</span> cat contact.txt
+            </button>
+        </div>
+
+        <!-- Terminal Content Area -->
+        <div id="content" class="p-4 md:p-6 flex-1 overflow-auto bg-terminal">
+            <!-- Content Injected Here -->
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

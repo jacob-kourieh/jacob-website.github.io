@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob Kourieh - Terminal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#300a24', // Ubuntu purple
+                        primary: '#3465a4',
+                        secondary: '#729fcf',
+                        accent: '#e87b35',
+                        text: '#eeeeec',
+                        muted: '#888a85',
+                        green: '#4e9a06',
+                        yellow: '#c4a000',
+                        cyan: '#3465a4',
+                        promptUser: '#87d441',
+                        promptPath: '#729fcf',
+                    },
+                    fontFamily: {
+                        mono: ['Consolas', 'Monaco', 'Courier New', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #000000;
+            color: #eeeeec;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body class="h-screen w-screen flex flex-col" onclick="document.getElementById('terminal-input')?.focus()">
+
+    <div id="terminal-container" class="flex-1 overflow-auto p-4 md:p-6 font-mono text-sm scrollbar-hide">
+        <div id="history"></div>
+
+        <div id="input-line" class="flex items-start gap-2 hidden">
+            <!-- Content injected by JS -->
+        </div>
+
+        <div id="terminal-end"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
