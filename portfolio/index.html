@@ -4,7 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jacob Kourieh - Portfolio</title>
+    <title>Jacob Tech Studio - Network Technician & SaaS Developer | Portfolio</title>
+    <meta name="description"
+        content="Jacob Tech Studio: Professional Network Technician (Nätverkstekniker) and Full-Stack Developer. Specializing in secure infrastructure, automation, and SaaS solutions. Expert in C# .NET, React, and Azure.">
+    <meta name="keywords"
+        content="Jacob Tech Studio, Nätverkstekniker, Network Technician, SaaS, Automation, IT Security, Full-Stack Developer, C# .NET, React, Azure, Web Development, Digital Platforms, Jacob Kourieh">
+    <meta name="author" content="Jacob Kourieh">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Jacob Tech Studio - Portfolio">
+    <meta property="og:description"
+        content="Building secure infrastructure and scalable SaaS platforms. Network Technician & Full-Stack Developer.">
+    <meta property="og:image" content="../images/portfolio_avatar.webp">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -90,10 +102,10 @@
                 data-section="skills" data-cmd="ls -la ./skills/">
                 <span class="text-green">$</span> ls -la ./skills/
             </button>
-            <button onclick="renderSection('projects')"
+            <button onclick="renderSection('experience')"
                 class="nav-btn px-2 md:px-3 py-1 rounded text-xs md:text-sm transition-all border border-transparent"
-                data-section="projects" data-cmd="git log --oneline projects/">
-                <span class="text-green">$</span> git log --oneline projects/
+                data-section="experience" data-cmd="git log --oneline experience/">
+                <span class="text-green">$</span> git log --oneline experience/
             </button>
             <button onclick="renderSection('education')"
                 class="nav-btn px-2 md:px-3 py-1 rounded text-xs md:text-sm transition-all border border-transparent"

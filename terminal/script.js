@@ -29,7 +29,7 @@ const profileData = {
 };
 
 const profileSummary = `Nätverkstekniker och Full-Stack utvecklare med spetskompetens inom säker infrastruktur och automation.
-Jag designar och driftar robusta nätverkslösningar samtidigt som jag utvecklar egna SaaS-tjänster och digitala plattformar i mitt företag.
+Jag designar och driftar robusta nätverkslösningar samtidigt som jag utvecklar egna SaaS-tjänster och digitala plattformar som ska lanseras snart.
 
 Med ett djupt intresse för AI och maskininlärning integrerar jag intelligenta lösningar för att modernisera och effektivisera IT-miljöer.
 Målinriktad problemlösare som trivs i gränslandet mellan hårdvara, kod och verksamhetsnytta.`;
@@ -54,8 +54,9 @@ const skills = {
 };
 
 const projects = [
-    { name: 'Jacob Tech Studio', type: 'Enskild firma', description: 'Bygger och driftar robusta nätverkslösningar samtidigt som jag utvecklar egna SaaS-tjänster och digitala plattformar i mitt företag.', tech: ['C# .NET', 'Azure SQL', 'React', 'TypeScript', 'Stripe Connect'], features: ['Gemensam admin-dashboard', 'Säkerhetsloggning och IP-blockering', 'Bildhantering och dynamiskt innehåll', 'Betalflöden och integrationer'] },
     { name: 'FöreningsVärlden', type: 'Frilans', description: 'Utvecklade och underhöll digitala lösningar för föreningsadministration.', tech: ['Blazor', 'C# .NET', 'Administration'], features: ['Funktioner för medlemshantering', 'Ekonomi och kommunikation', 'Responsiva gränssnitt'] },
+    { name: 'Yoin Technologies AB', type: 'Frontend Developer', description: 'Drev utvecklingen av skalbara webbapplikationer med fokus på prestanda och modern React-arkitektur.', tech: ['React', 'TypeScript', 'Web Development'], features: ['Komponentbaserad arkitektur', 'Prestandaoptimering', 'Sömlös API-integration'] },
+    { name: 'SWEDCON 18', type: 'Frontend Developer', description: 'Nyckelroll i utvecklingen av innovativa HealthTech-applikationer med Next.js.', tech: ['Next.js', 'React', 'HealthTech'], features: ['Användarcentrerat gränssnitt', 'Tvärfunktionellt samarbete', 'Tillgänglighet (WCAG)'] },
     { name: 'Fullstack Developer', type: 'Frilans', description: 'Byggde fullstack-applikationer med autentisering och API.', tech: ['Node.js', 'TypeScript', 'MongoDB'], features: ['Autentisering och säkerhet', 'REST API utveckling', 'Databasdesign'] },
 ];
 
@@ -207,7 +208,7 @@ function executeCommand(cmd) {
                         <div><span class="text-green">cat [file]</span> - Display file contents</div>
                         <div><span class="text-green">profile</span> - Show profile information</div>
                         <div><span class="text-green">skills</span> - List technical skills</div>
-                        <div><span class="text-green">projects</span> - Show projects</div>
+                        <div><span class="text-green">experience</span> - Show work experience</div>
                         <div><span class="text-green">education</span> - Display education</div>
                         <div><span class="text-green">contact</span> - Show contact information</div>
                         <div><span class="text-green">about</span> - About this terminal</div>
@@ -239,7 +240,7 @@ function executeCommand(cmd) {
                 <div class="text-text font-mono">
                     <div class="text-cyan">drwxr-xr-x  jacob  jacob  4096  Jan 31 2026  <span class="text-primary">profile/</span></div>
                     <div class="text-cyan">drwxr-xr-x  jacob  jacob  4096  Jan 31 2026  <span class="text-primary">skills/</span></div>
-                    <div class="text-cyan">drwxr-xr-x  jacob  jacob  4096  Jan 31 2026  <span class="text-primary">projects/</span></div>
+                    <div class="text-cyan">drwxr-xr-x  jacob  jacob  4096  Jan 31 2026  <span class="text-primary">experience/</span></div>
                     <div class="text-cyan">drwxr-xr-x  jacob  jacob  4096  Jan 31 2026  <span class="text-primary">education/</span></div>
                     <div class="text-cyan">-rw-r--r--  jacob  jacob  1024  Jan 31 2026  <span class="text-text">README.md</span></div>
                     <div class="text-cyan">-rw-r--r--  jacob  jacob  2048  Jan 31 2026  <span class="text-text">contact.txt</span></div>
@@ -334,10 +335,11 @@ function executeCommand(cmd) {
             `);
             break;
 
+        case 'experience':
         case 'projects':
             addToHistory(`
                  <div class="text-text">
-                    <div class="text-accent text-lg font-bold">🚀 PROJECTS</div>
+                    <div class="text-accent text-lg font-bold">🚀 WORK EXPERIENCE</div>
                     <div class="mt-3 space-y-4">
                          ${projects.map(p => `
                             <div class="border-l-2 pl-3 border-primary">

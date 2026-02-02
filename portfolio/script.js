@@ -42,7 +42,7 @@ const profileData = {
 };
 
 const profileSummary = `Nätverkstekniker och Full-Stack utvecklare med spetskompetens inom säker infrastruktur och automation.
-Jag designar och driftar robusta nätverkslösningar samtidigt som jag utvecklar egna SaaS-tjänster och digitala plattformar i mitt företag.
+Jag designar och driftar robusta nätverkslösningar samtidigt som jag utvecklar egna SaaS-tjänster och digitala plattformar som ska lanseras snart.
 
 Med ett djupt intresse för AI och maskininlärning integrerar jag intelligenta lösningar för att modernisera och effektivisera IT-miljöer.
 Målinriktad problemlösare som trivs i gränslandet mellan hårdvara, kod och verksamhetsnytta.`;
@@ -94,18 +94,6 @@ const skills = {
 // Projects
 const projects = [
     {
-        name: 'Jacob Tech Studio',
-        type: 'Enskild firma',
-        description: 'Bygger och driftar digitala plattformar för företag. Backend, säkerhet, databas, drift och automatisering.',
-        tech: ['C# .NET', 'Azure SQL', 'React', 'TypeScript', 'Stripe Connect'],
-        features: [
-            'Gemensam admin-dashboard',
-            'Säkerhetsloggning och IP-blockering',
-            'Bildhantering och dynamiskt innehåll',
-            'Betalflöden och integrationer',
-        ],
-    },
-    {
         name: 'FöreningsVärlden',
         type: 'Frilans',
         description: 'Utvecklade och underhöll digitala lösningar för föreningsadministration.',
@@ -114,6 +102,30 @@ const projects = [
             'Funktioner för medlemshantering',
             'Ekonomi och kommunikation',
             'Responsiva gränssnitt',
+        ],
+    },
+    {
+        name: 'Yoin Technologies AB',
+        type: 'Frontend Developer',
+        description: 'Drev utvecklingen av skalbara webbapplikationer med fokus på prestanda och modern React-arkitektur. Implementerade avancerade frontend-lösningar i en snabbrörlig agil miljö.',
+        tech: ['React', 'TypeScript', 'Web Development', 'Modern UI'],
+        features: [
+            'Komponentbaserad arkitektur',
+            'State Management & Hooks',
+            'Prestandaoptimering',
+            'Responsiv & Adaptiv Design',
+        ],
+    },
+    {
+        name: 'SWEDCON 18',
+        type: 'Frontend Developer',
+        description: 'Nyckelroll i utvecklingen av innovativa HealthTech-applikationer byggda med Next.js. Arbetade tvärfunktionellt med branschexperter och designers för att skapa intuitiva digitala vårdverktyg.',
+        tech: ['Next.js', 'React', 'HealthTech', 'UX/UI Collaboration'],
+        features: [
+            'Användarcentrerat gränssnitt',
+            'Tvärfunktionellt samarbete',
+            'Avancerad datahantering',
+            'Tillgänglighet (WCAG)',
         ],
     },
     {
@@ -369,7 +381,7 @@ function renderProjects() {
 
     const outputHtml = `
         <div class="space-y-6 font-mono text-sm md:text-base">
-            ${SectionHeader('# PROJECTS & EXPERIENCE')}
+            ${SectionHeader('# WORK EXPERIENCE')}
             ${projects.map(project => `
                 <div class="p-4 rounded border border-accent/40 mb-4">
                     <div class="flex flex-wrap items-center gap-3 mb-2">
@@ -388,7 +400,7 @@ function renderProjects() {
             `).join('')}
         </div>
     `;
-    container.appendChild(createTerminalLine('git log --oneline projects/', outputHtml, 0, true));
+    container.appendChild(createTerminalLine('git log --oneline experience/', outputHtml, 0, true));
     return container;
 }
 
@@ -500,7 +512,7 @@ function renderSection(sectionId) {
         case 'home': content = renderHome(); break;
         case 'profile': content = renderProfile(); break;
         case 'skills': content = renderSkills(); break;
-        case 'projects': content = renderProjects(); break;
+        case 'experience': content = renderProjects(); break;
         case 'education': content = renderEducation(); break;
         case 'contact': content = renderContact(); break;
         default: content = renderHome();
