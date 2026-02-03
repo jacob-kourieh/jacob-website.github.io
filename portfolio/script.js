@@ -313,7 +313,7 @@ function renderProfile() {
             <div class="flex flex-col md:flex-row gap-6 items-start">
                 <!-- Avatar -->
                 <div class="relative border border-primary w-[200px] h-[240px] overflow-hidden flex-shrink-0">
-                    <img src="../images/portfolio_avatar.webp" alt="Jacob Kourieh" class="w-full h-full object-cover">
+                    <img src="../images/portfolio_avatar.png" alt="Jacob Kourieh" class="w-full h-full object-cover">
                     <!-- Scanlines effect approximated with CSS -->
                     <div class="absolute inset-0 pointer-events-none" style="background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.2) 2px, rgba(0,0,0,0.2) 4px);"></div>
                     <div class="absolute inset-0 pointer-events-none bg-cyan/10 mix-blend-overlay"></div>
